@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<!-- v100 -->
+<meta charset="UTF-8">
+<!-- v26 Premium Learning Upgrade: existing account data is preserved. -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DIY ENGLISH 8 • Ôn thi lớp 8</title>
+<style>
+:root{--primary:#6c4cff;--primary2:#00c2ff;--accent:#ff4fa3;--gold:#ffc857;--bg:#f6f4ff;--surface:#fff;--text:#202033;--muted:#6f7185;--shadow:0 16px 40px rgba(63,48,140,.14)}
+body{background:linear-gradient(135deg,#f7f2ff,#eefaff);color:var(--text)}
+.premiumWelcome{position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,#fff 0,#f5eaff 32%,#dff8ff 100%);display:flex;align-items:center;justify-content:center;z-index:99999;padding:22px}
+.premiumWelcome.hidden{display:none}.premiumWelcome .welcomeCard{max-width:720px;width:100%;padding:42px;border-radius:34px;background:rgba(255,255,255,.9);box-shadow:0 30px 90px rgba(89,48,170,.25);text-align:center;animation:welcomeIn .7s ease both;border:1px solid #fff}
+.premiumCrown{font-size:72px;animation:crownFloat 2s ease-in-out infinite}.premiumWelcome h1{font-size:clamp(28px,5vw,52px);margin:8px 0;background:linear-gradient(90deg,#6c4cff,#00aeea,#ff4fa3);-webkit-background-clip:text;color:transparent}.premiumWelcome p{font-size:18px;color:var(--muted);line-height:1.7}.welcomeBadge{display:inline-block;padding:10px 18px;border-radius:999px;background:linear-gradient(90deg,#ffd86b,#ff9d4d);font-weight:900;color:#513500}.welcomeClose{margin-top:22px;border:0;border-radius:18px;padding:14px 26px;background:linear-gradient(90deg,#6c4cff,#00bce8);color:#fff;font-weight:900;font-size:16px;cursor:pointer}
+.premiumExpire{padding:12px 16px;border-radius:16px;background:linear-gradient(135deg,#fff6d7,#fff);border:1px solid #ffe39a;font-weight:800;color:#735300}
+.learningHub{margin:14px 0;padding:18px;border-radius:22px;background:linear-gradient(135deg,#24124d,#123b67);border:1px solid #8b5cf6;box-shadow:0 14px 38px #0005;text-align:left}.learningHub h3{margin:0 0 6px;color:#fff}.learningHub p{color:#cfe7ff;line-height:1.55}.learningHubGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.learningHubGrid button{margin:0;min-height:62px;background:linear-gradient(135deg,#6d28d9,#0ea5e9);border-color:#a78bfa}.learningHubGrid .premiumOnly{background:linear-gradient(135deg,#a855f7,#ec4899)}.learningBadge{display:inline-block;padding:5px 9px;border-radius:999px;background:#ffd166;color:#2b2100;font-size:10px;font-weight:900}.testResult{margin-top:14px;padding:18px;border-radius:18px;background:#0d1d31;border:1px solid #5b9bd5}.scheduleDay{padding:14px;margin:9px 0;border-radius:15px;background:#0d1d31;border:1px solid #315a7e}.scheduleDay b{color:#d8b4fe}.tutorChat{margin-top:14px;padding:18px;border-radius:20px;background:linear-gradient(135deg,#17122d,#40317c);border:1px solid #8b5cf6}.tutorBubble{padding:12px 14px;margin:8px 0;border-radius:14px;background:#ffffff12;border:1px solid #ffffff1a;line-height:1.6}.premiumCountdown{font-size:13px;color:#ffe08a;font-weight:800}
+.studyGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.studyCard{padding:22px;border-radius:24px;background:#fff;box-shadow:var(--shadow);border:1px solid #eeeaff}.studyCard h3{margin-top:0}.lockedPremium{position:relative}.lockedPremium:after{content:'🔒 PREMIUM';position:absolute;top:12px;right:12px;padding:6px 10px;border-radius:999px;background:#211b42;color:#fff;font-size:11px;font-weight:900}.aiTutor{border-radius:28px;background:linear-gradient(135deg,#17122d,#40317c);color:#fff;padding:24px;box-shadow:0 20px 50px rgba(31,18,70,.25)}
+@keyframes welcomeIn{from{opacity:0;transform:translateY(30px) scale(.95)}to{opacity:1;transform:none}}@keyframes crownFloat{50%{transform:translateY(-10px) rotate(4deg)}}
+</style>
+<style>
+*{box-sizing:border-box}
+body,#app{
+  margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#071a33,#102b4c 45%,#07111f);
+  color:#fff;font-family:Arial,sans-serif;overflow:hidden
+}
+.card{
+  width:min(720px,94vw);max-height:92vh;overflow:auto;padding:28px;border:1px solid #4da3ff;
+  border-radius:24px;background:rgba(12,8,24,.94);
+  box-shadow:0 0 35px #1685ff33;text-align:center
+}
+h1{margin:0 0 8px;color:#8dccff;text-shadow:0 0 15px #1685ff}
+.sub{color:#aaa;margin-bottom:25px}
+button{
+  width:100%;padding:13px;margin:8px 0;border:0;border-radius:12px;
+  color:white;font-weight:bold;cursor:pointer;background:linear-gradient(90deg,#1677d2,#29a8ff);
+  box-shadow:0 0 15px #1685ff55
+}
+button:hover{filter:brightness(1.15)}
+.hidden{display:none}
+.row,.exam-card{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:15px;margin:10px 0;border-radius:14px;background:#0d1d31;border:1px solid #23496b
+}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.grid button{margin:0}
+.exam-card{text-align:left}.exam-card h3{margin:0 0 8px}.answer{width:100%;padding:11px;border-radius:10px;border:1px solid #315a7e;background:#081522;color:#fff;margin-top:8px}
+.score{font-size:26px;color:#7dccff;font-weight:bold;margin:12px}
+.timer{position:sticky;top:0;z-index:5;padding:12px;margin:-8px 0 14px;border-radius:12px;background:#071a2d;border:1px solid #4da3ff;color:#8dccff;font-size:22px;font-weight:800;text-align:center}
+.timer.warning{color:#ffd166;border-color:#ffd166}.timer.danger{color:#ff7b7b;border-color:#ff7b7b}
+.section-title{margin-top:22px;padding:10px 12px;border-left:4px solid #29a8ff;background:#1685ff16;border-radius:8px;color:#9ed8ff}
+.listen-q,.grammar-q{padding:12px;margin:10px 0;border:1px solid #23496b;border-radius:12px;background:#081522}
+.locked{pointer-events:none;opacity:.65}
+.switch{width:52px;height:28px;background:#392d4e;border-radius:30px;position:relative;cursor:pointer}
+.switch:after{content:"";position:absolute;width:22px;height:22px;top:3px;left:4px;border-radius:50%;background:#aaa;transition:.25s}
+.switch.on{background:#7c3aed;box-shadow:0 0 12px #8b5cf6}
+.switch.on:after{left:26px;background:#fff}
+#log{height:48px;margin-top:15px;color:#bfa7d9;font-size:13px}
+.small{font-size:11px;color:#777;margin-top:14px}
+.content-card{display:grid;grid-template-columns:140px 1fr 1fr;gap:18px;margin-top:12px;padding:20px;text-align:left;border-radius:18px;background:linear-gradient(145deg,#102943,#0b1c30);border:1px solid #2b5275;box-shadow:0 12px 28px #0005}
+.content-head{display:flex;align-items:center;gap:10px;color:#9ed8ff;font-size:18px;font-weight:800;line-height:1.25}
+.content-head .icon{width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:#1685ff22;border:1px solid #1685ff55;font-size:22px}
+.term-block{padding:4px 0}.term-title{display:flex;align-items:center;gap:8px;margin:0 0 9px;font-size:14px;color:#7dccff}.term-title span{padding:4px 8px;border-radius:7px;background:#1685ff1c;border:1px solid #1685ff44;font-size:11px}.units{margin:0;color:#d8e6f3;font-size:12px;line-height:1.75}.focus{margin:0;color:#9fb5c9;font-size:11px;line-height:1.65}
+.login-box{max-width:430px;margin:0 auto}.login-box .answer{margin:7px 0}.login-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}.login-tabs button{margin:0;background:#102943;border:1px solid #315a7e}.login-tabs button.active{background:linear-gradient(90deg,#1677d2,#29a8ff)}
+.login-msg{min-height:22px;color:#ffd166;font-size:13px;margin-top:8px}.user-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;margin-bottom:14px;border-radius:12px;background:#0d1d31;border:1px solid #23496b;color:#bfe4ff}.user-bar button{width:auto;margin:0;padding:8px 12px}
+.history-box{margin-top:14px;padding:14px;border-radius:12px;background:#081522;border:1px solid #23496b;text-align:left}.history-box h3{margin:0 0 8px;color:#9ed8ff}.history-item{padding:8px 0;border-bottom:1px solid #18344f;font-size:12px}.history-item:last-child{border-bottom:0}
+.ai-panel{margin-top:14px;padding:16px;border-radius:14px;background:#081522;border:1px solid #315a7e;text-align:left}.ai-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.ai-box{padding:10px;border-radius:10px;background:#0d1d31;border:1px solid #23496b}.ai-box b{display:block;color:#8dccff;font-size:18px}.ai-bar{height:7px;border-radius:8px;background:#102943;overflow:hidden;margin-top:6px}.ai-bar i{display:block;height:100%;background:linear-gradient(90deg,#29a8ff,#7c3aed)}.error-item{padding:8px 0;border-bottom:1px solid #18344f;font-size:12px}.error-item:last-child{border-bottom:0}
+.menu-panel{display:none;margin:12px 0;padding:14px;border-radius:14px;background:#081522;border:1px solid #23496b;text-align:left}.menu-panel h3{margin:0 0 10px;color:#9ed8ff}.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}.stat-box{padding:12px;border-radius:10px;background:#0d1d31;border:1px solid #23496b;text-align:center}.stat-box b{display:block;font-size:20px;color:#7dccff}.weak-item{padding:9px 0;border-bottom:1px solid #18344f;font-size:12px}.weak-item:last-child{border-bottom:0}.progress{height:9px;border-radius:9px;background:#102943;overflow:hidden;margin-top:6px}.progress i{display:block;height:100%;background:linear-gradient(90deg,#1677d2,#29a8ff)}
+  .ielts-panel{margin:14px 0;padding:14px;border-radius:14px;background:#081522;border:1px solid #315a7e;text-align:left}.ielts-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.ielts-box{padding:10px;border-radius:10px;background:#0d1d31;border:1px solid #23496b}.ielts-box b{display:block;color:#8dccff;font-size:17px}.ielts-tip{font-size:12px;color:#c7d8e8;line-height:1.6}
+@media(max-width:650px){.content-card{grid-template-columns:1fr;gap:12px}.content-head{font-size:16px}.term-block{padding-top:2px}}
+</style>
+<script>
+// DIY Gaming v77 learning/premium upgrade layer
+const DIY_PREMIUM_DAYS_DEFAULT=15;
+/* v26 upgrade: premium/account compatibility + safer local migration */
+function diySafeJson(key,fallback){try{const v=JSON.parse(localStorage.getItem(key)||'');return v??fallback}catch(e){return fallback}}
+function diyEnsureAccountLearningData(user=diyGetCurrentUser()){
+  if(!user)return;
+  const k='diyDiagnostic_'+user;
+  if(!localStorage.getItem(k)) localStorage.setItem(k,JSON.stringify({status:'pending',createdAt:Date.now()}));
+  const p='diyLearningPlan_'+user;
+  if(!localStorage.getItem(p)) localStorage.setItem(p,JSON.stringify({status:'pending',updatedAt:Date.now(),days:[]}));
+}
+function diyGetCurrentUser(){return localStorage.getItem('diyEnglishCurrentUser')||''}
+function diyPremiumInfo(user=diyGetCurrentUser()){
+  try{return JSON.parse(localStorage.getItem('diyEnglishPremiumInfo_'+user)||'null')}catch(e){return null}
+}
+function diyPremiumActive(user=diyGetCurrentUser()){
+  const x=diyPremiumInfo(user); return !!(x&&x.expiresAt>Date.now());
+}
+function diyDaysLeft(user=diyGetCurrentUser()){
+  const x=diyPremiumInfo(user); return x?Math.max(0,Math.ceil((x.expiresAt-Date.now())/86400000)):0;
+}
+function diyGrantPremium(user,days=DIY_PREMIUM_DAYS_DEFAULT){
+  user=String(user||'').trim(); days=Math.floor(Number(days));
+  if(!user)throw new Error('Tên tài khoản trống');
+  if(!Number.isFinite(days)||days<1)throw new Error('Số ngày phải từ 1 trở lên');
+  let premium=[];try{premium=JSON.parse(localStorage.getItem('diyEnglishPremiumUsers')||'[]');if(!Array.isArray(premium))premium=[]}catch(e){premium=[]}
+  const old=diyPremiumInfo(user),now=Date.now(),base=old&&Number(old.expiresAt)>now?Number(old.expiresAt):now;
+  const info={user,startedAt:old&&old.startedAt?old.startedAt:now,expiresAt:base+days*86400000,days,grantedAt:now,active:true};
+  localStorage.setItem('diyEnglishPremiumInfo_'+user,JSON.stringify(info));
+  premium=premium.filter(x=>x!==user); premium.push(user);
+  localStorage.setItem('diyEnglishPremiumUsers',JSON.stringify(premium));
+  return info;
+}
+
+function diyPremiumStatus(user=diyGetCurrentUser()){
+  const info=diyPremiumInfo(user),active=!!(info&&Number(info.expiresAt)>Date.now());
+  return {active,info,daysLeft:active?Math.max(0,Math.ceil((Number(info.expiresAt)-Date.now())/86400000)):0};
+}
+
+function diyRequirePremium(){
+  const u=diyGetCurrentUser();
+  if(!u){alert('🔐 Vui lòng đăng nhập trước.');return false;}
+  diyEnsureAccountLearningData(u);
+  if(!diyPremiumActive(u)){alert('👑 Tính năng này chỉ dành cho Premium.\nHãy nhờ Admin cấp Premium cho tài khoản của bạn.');return false;}
+  return checkPremiumDevice(u);
+}
+function diyMigrateOldPremiumData(){
+  const list=JSON.parse(localStorage.getItem('diyEnglishPremiumUsers')||'[]');
+  list.forEach(u=>{if(!diyPremiumInfo(u))diyGrantPremium(u,DIY_PREMIUM_DAYS_DEFAULT)});
+}
+function diyRequirePremium(){
+  const u=diyGetCurrentUser();
+  if(diyPremiumActive(u))return true;
+  alert('🔒 Tính năng này dành cho Premium. Hãy nâng cấp để mở lộ trình học và AI gia sư.');
+  return false;
+}
+function diyEnsureDiagnosticForNewUser(user=diyGetCurrentUser()){
+  if(!user)return;
+  const key='diyDiagnostic_'+user;
+  if(!localStorage.getItem(key))localStorage.setItem('diyDiagnosticPending_'+user,'1');
+}
+function diyPromptDiagnosticIfNeeded(){
+  const u=diyGetCurrentUser();
+  if(!u||u==='maiphucduyadmin')return;
+  if(localStorage.getItem('diyDiagnostic_'+u))return;
+  if(sessionStorage.getItem('diyDiagnosticPrompted_'+u))return;
+  sessionStorage.setItem('diyDiagnosticPrompted_'+u,'1');
+  setTimeout(()=>{if(confirm('🎯 Chào mừng '+u+'!\n\nHãy làm bài Test đánh giá năng lực 20 câu để hệ thống xác định mức hiện tại và xây lộ trình học cho bạn.\n\nLàm ngay?')){openLearningHub();setTimeout(diyDiagnostic,120)}},350);
+}
+function diyShowPremiumWelcome(){
+  if(!diyPremiumActive())return;
+  const u=diyGetCurrentUser(), key='diyPremiumWelcomeSeen_'+u;
+  if(sessionStorage.getItem(key))return;
+  const wrap=document.createElement('div');wrap.className='premiumWelcome';wrap.id='premiumWelcome';
+  wrap.innerHTML='<div class="welcomeCard"><div class="premiumCrown">👑</div><span class="welcomeBadge">✨ PREMIUM MEMBER</span><h1>Chào mừng bạn trở lại!</h1><p>🎓 Lộ trình học cá nhân đã sẵn sàng.<br>🤖 AI Gia Sư • IELTS & B1 • Bài test • Kế hoạch nâng band<br>🌍 Hội thoại 1-1 luyện tiếng Anh<br>⏳ Còn <b>'+diyDaysLeft(u)+' ngày</b> Premium.</p><button class="welcomeClose" onclick="document.getElementById(\'premiumWelcome\').remove();sessionStorage.setItem(\'diyPremiumWelcomeSeen_'+u+'\',\'1\')">🚀 Bắt đầu học</button></div>';
+  document.body.appendChild(wrap);
+  sessionStorage.setItem(key,'1');
+}
+function diyOpenStudyPlan(){
+  if(!diyRequirePremium())return;
+  const c=document.getElementById('exam');if(!c)return;
+  const d=JSON.parse(localStorage.getItem('diyDiagnostic_'+diyGetCurrentUser())||'null');
+  const level=d?d.level:'Chưa test';
+  c.innerHTML='<h2>🎓 LỘ TRÌNH HỌC CÁ NHÂN</h2><div class="premiumExpire">👑 Premium còn '+diyDaysLeft()+' ngày • Mức hiện tại: <b>'+level+'</b></div><div class="studyGrid"><div class="studyCard"><h3>🧪 Bước 1 — Chẩn đoán</h3><p>Test đánh giá đầu vào được lưu riêng cho tài khoản.</p><button onclick="diyDiagnostic()">🔁 Làm/đánh giá lại</button></div><div class="studyCard"><h3>🎯 Bước 2 — Mục tiêu</h3><p>Đặt mục tiêu nâng điểm theo mức hiện tại và theo dõi tiến bộ mỗi tuần.</p></div><div class="studyCard"><h3>📚 Bước 3 — Lịch 7 ngày</h3><div class="scheduleDay"><b>Thứ 2</b> • Grammar 30 phút + AI giảng bài</div><div class="scheduleDay"><b>Thứ 3</b> • Reading 30 phút + từ vựng</div><div class="scheduleDay"><b>Thứ 4</b> • Listening 30 phút + nghe lại lỗi</div><div class="scheduleDay"><b>Thứ 5</b> • Writing 40 phút + AI chữa bài</div><div class="scheduleDay"><b>Thứ 6</b> • Speaking 30 phút + luyện phản xạ</div><div class="scheduleDay"><b>Thứ 7</b> • IELTS/B1 45 phút</div><div class="scheduleDay"><b>Chủ nhật</b> • Mini test + tổng kết điểm</div></div><div class="studyCard lockedPremium"><h3>📝 IELTS & B1</h3><p>Luyện theo cấu trúc kỹ năng và dạng bài phù hợp mục tiêu; không sao chép nguyên văn đề có bản quyền.</p><button onclick="startIELTSB1()">🚀 Vào khu IELTS/B1</button></div><div class="studyCard lockedPremium"><h3>🤖 AI Gia Sư</h3><p>AI giải thích bài, đưa ví dụ, hướng dẫn từng bước và chữa câu trả lời.</p><button onclick="diyAITutor()">🤖 Mở AI Gia Sư</button></div></div>';
+  c.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function openLearningHub(){
+  const c=document.getElementById('exam');if(!c)return;
+  document.querySelectorAll('.menu-panel').forEach(x=>{if(x.id!=='studentMenu')x.style.display='none'});
+  c.style.display='block';
+  const premium=diyPremiumActive();
+  const saved=JSON.parse(localStorage.getItem('diyDiagnostic_'+diyGetCurrentUser())||'null');
+  c.innerHTML='<div class="learningHub"><span class="learningBadge">🎓 HỆ THỐNG HỌC CÁ NHÂN</span><h3>🎯 Test đánh giá học lực → Lộ trình → AI gia sư</h3><p>Test dành cho mọi tài khoản. Kết quả được lưu riêng theo tài khoản. Premium mở lịch học cá nhân, AI gia sư, IELTS/B1 và phòng luyện nói với AI an toàn.</p><div class="learningHubGrid"><button onclick="diyDiagnostic()">🧪 '+(saved&&saved.status!=='pending'?'Làm lại test':'Làm test đánh giá')+'</button><button class="premiumOnly" onclick="diyOpenStudyPlan()">📅 Lịch trình <span class="learningBadge">PREMIUM</span></button><button class="premiumOnly" onclick="diyAITutor()">🤖 AI gia sư <span class="learningBadge">PREMIUM</span></button><button class="premiumOnly" onclick="diyOpenSpeakingPartner()">🗣️ Luyện 1-1 với AI <span class="learningBadge">PREMIUM</span></button></div><div class="premiumCountdown" style="margin-top:12px">'+(premium?'👑 Premium đang hoạt động • còn '+diyDaysLeft()+' ngày':'🔒 Lịch trình, AI gia sư, IELTS/B1 và luyện nói Premium đang khóa')+'</div></div>';
+  c.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function diyOpenSpeakingPartner(){
+  if(!diyRequirePremium())return;
+  const c=document.getElementById('exam');if(!c)return;
+  c.style.display='block';
+  c.innerHTML='<h2>🗣️ PHÒNG LUYỆN NÓI 1-1 • PREMIUM</h2><div class="tutorChat"><h3>🌍 AI Speaking Partner</h3><p>Luyện hội thoại 1-1 với AI bằng tiếng Anh. Đây là môi trường luyện tập an toàn, không ghép bạn với người lạ ngoài đời.</p><div style="margin:16px 0"><label for="speakTopic" style="display:block;font-weight:800;margin-bottom:8px">🎯 Chọn chủ đề:</label><select class="answer" id="speakTopic" style="width:100%;padding:12px;border-radius:12px"><option value="Daily life">🌤️ Daily life • Cuộc sống hằng ngày</option><option value="School">🏫 School • Trường học</option><option value="Travel">✈️ Travel • Du lịch</option><option value="Hobbies">🎮 Hobbies • Sở thích</option><option value="IELTS Speaking">🎓 IELTS Speaking</option><option value="B1 Speaking">📚 B1 Speaking</option></select></div><button type="button" onclick="diyStartSpeaking()" style="width:100%;padding:14px;font-weight:900">🎙️ BẮT ĐẦU HỘI THOẠI 1-1</button><div id="speakBox"></div></div>';
+  c.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function diyStartSpeaking(){
+  if(!diyRequirePremium())return;
+  const topic=document.getElementById('speakTopic')?.value||'Daily life';
+  const prompts={
+    'Daily life':'Hi! Tell me about your day. What do you usually do after school?',
+    'School':'What is your favorite school subject, and why?',
+    'Travel':'If you could visit any place, where would you go and what would you do there?',
+    'Hobbies':'What hobby do you enjoy most? Tell me how you started it.',
+    'IELTS Speaking':'Let’s practice IELTS Speaking. Describe a hobby you enjoy and explain why it is important to you.',
+    'B1 Speaking':'Let’s practice B1 Speaking. Tell me about a memorable day and explain what made it special.'};
+  document.getElementById('speakBox').innerHTML='<div class="tutorBubble"><b>🤖 AI:</b><br>'+prompts[topic]+'</div><textarea class="answer" id="speakAnswer" rows="5" placeholder="Write your answer here..."></textarea><button onclick="diyCheckSpeaking()">🧠 AI nhận xét</button><div id="speakFeedback"></div>';
+}
+function diyCheckSpeaking(){
+  if(!diyRequirePremium())return;
+  const a=(document.getElementById('speakAnswer')?.value||'').trim();
+  if(!a){alert('✍️ Hãy nhập câu trả lời trước.');return}
+  const words=a.split(/\s+/).filter(Boolean).length;
+  const feedback=words<12?'Hãy nói dài hơn một chút và thêm lý do hoặc ví dụ.':words<35?'Khá tốt! Hãy thêm từ nối như because, however, for example để câu trả lời tự nhiên hơn.':'Rất tốt! Bạn đã có độ dài và ý khá rõ. Hãy tiếp tục luyện phát âm, từ vựng và sự mạch lạc.';
+  document.getElementById('speakFeedback').innerHTML='<div class="tutorBubble"><b>🧠 Nhận xét:</b><br>'+feedback+'<br><small>Độ dài: '+words+' từ • Đây là nhận xét luyện tập, không phải điểm thi chính thức.</small></div>';
+}
+
+/* v26: automatic account learning bootstrap + legacy Premium normalization */
+function diyNormalizePremiumData(){
+  let list=diySafeJson('diyEnglishPremiumUsers',[]);if(!Array.isArray(list))list=[];
+  const now=Date.now(),out=[];
+  list.forEach(u=>{const info=diyPremiumInfo(u);if(info&&Number(info.expiresAt)>now)out.push(u)});
+  localStorage.setItem('diyEnglishPremiumUsers',JSON.stringify(out));
+}
+try{diyNormalizePremiumData()}catch(e){}
+const diyDiagnosticQuestions=[
+ ['Vocabulary','Choose the closest meaning of “improve”.',['make better','make smaller','make louder'],0],
+ ['Grammar','She ___ to school every day.',['go','goes','going'],1],
+ ['Grammar','I ___ my homework yet.',['haven’t finished','didn’t finish','don’t finish'],0],
+ ['Vocabulary','The opposite of “difficult” is ___.',['easy','slow','late'],0],
+ ['Reading','Tom studies every evening because he wants to pass his exam. Why does Tom study?',['To pass his exam','To play games','To go shopping'],0],
+ ['Grammar','I have lived here ___ 2020.',['for','since','at'],1],
+ ['Vocabulary','A person who teaches students is a ___.',['teacher','driver','farmer'],0],
+ ['Grammar','My brother runs ___ than me.',['fast','faster','fastest'],1],
+ ['Reading','The library closes at 5 p.m. When does it close?',['5 p.m.','6 p.m.','4 p.m.'],0],
+ ['Grammar','If I have time tonight, I ___ English.',['study','will study','studied'],1],
+ ['Vocabulary','“Huge” is closest in meaning to ___.',['very big','very small','very old'],0],
+ ['Grammar','They are interested in ___ English.',['learn','learning','learned'],1],
+ ['Reading','Mai missed the bus, so she walked to school. Why did she walk?',['She missed the bus','She likes walking','It was raining'],0],
+ ['Vocabulary','To “borrow” something means to ___.',['take it and return it later','buy it forever','throw it away'],0],
+ ['Grammar','We ___ dinner when he called.',['have','had','were having'],2],
+ ['Reading','A schedule tells you ___.',['when activities happen','the weather only','your age'],0],
+ ['Grammar','There ___ many students in the room.',['is','are','be'],1],
+ ['Vocabulary','“Healthy” is related to ___.',['good for your health','very expensive','very noisy'],0],
+ ['Reading','Linh practices speaking every day and records her voice. What is she practicing?',['Speaking','Swimming','Drawing'],0],
+ ['Writing','Which sentence is written correctly?',['I enjoy to learn English.','I enjoy learning English.','I enjoying learn English.'],1]
+];
+function diyDiagnostic(){
+  const c=document.getElementById('exam');if(!c)return;
+  let i=0,score=0;
+  const render=()=>{const q=diyDiagnosticQuestions[i];c.innerHTML='<h2>🧪 TEST ĐÁNH GIÁ HỌC LỰC</h2><div class="testResult"><div class="premiumCountdown">Câu '+(i+1)+'/'+diyDiagnosticQuestions.length+' • '+q[0]+'</div><h3>'+q[1]+'</h3>'+q[2].map((x,n)=>'<button style="display:block;width:100%;margin:8px 0" onclick="diyDiagAnswer('+n+')">'+x+'</button>').join('')+'<p class="small">Bài test chẩn đoán để xây lộ trình học, không phải chứng chỉ chính thức.</p></div>';};
+  window.diyDiagAnswer=n=>{if(n===diyDiagnosticQuestions[i][3])score++;i++;if(i<diyDiagnosticQuestions.length)render();else{const total=diyDiagnosticQuestions.length,percent=Math.round(score/total*100);const level=percent>=90?'Xuất sắc':percent>=80?'Giỏi':percent>=65?'Khá':percent>=50?'Trung bình':'Cần củng cố';localStorage.setItem('diyDiagnostic_'+diyGetCurrentUser(),JSON.stringify({score,total,percent,level,at:Date.now()}));c.innerHTML='<h2>🎯 KẾT QUẢ ĐÁNH GIÁ</h2><div class="testResult"><div class="score">'+score+'/'+total+' • '+percent+'%</div><h3>📊 Mức hiện tại: '+level+'</h3><p>Hệ thống đã lưu kết quả cho tài khoản này.</p><p>'+(diyPremiumActive()?'👑 Premium: bạn có thể mở ngay lịch trình cá nhân và AI gia sư.':'🔒 Tài khoản thường: hãy nâng cấp Premium để mở lịch trình cá nhân và AI gia sư.')+'</p><button onclick="openLearningHub()">← Quay lại khu học tập</button>'+(diyPremiumActive()?'<button onclick="diyOpenStudyPlan()">📅 Xây lịch học Premium</button>':'')+'</div>';}};render();c.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function diyAITutor(){
+  if(!diyRequirePremium())return;
+  const c=document.getElementById('exam');if(!c)return;
+  c.style.display='block';
+  c.innerHTML='<h2>🤖 AI GIA SƯ DIY • PREMIUM</h2><div class="tutorChat"><h3>👨‍🏫 Gia sư cá nhân</h3><p>Chọn bài muốn được giảng:</p><select class="answer" id="tutorTopic"><option>Present Simple vs Present Continuous</option><option>Past Simple</option><option>Present Perfect</option><option>Comparatives & Superlatives</option><option>Conditional Sentences</option><option>Reading: tìm ý chính</option><option>Writing: viết đoạn văn</option><option>IELTS/B1 Speaking</option></select><button onclick="diyTutorTeach()">✨ Giảng bài cho tôi</button><div id="tutorAnswer"></div></div>';
+  c.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function diyTutorTeach(){
+  if(!diyRequirePremium())return;
+  const topic=document.getElementById('tutorTopic')?.value||'';const bank={
+   'Present Simple vs Present Continuous':'Present Simple dùng cho thói quen/sự thật; Present Continuous dùng cho việc đang xảy ra. Mẹo: every day thường gợi ý Present Simple, now/at the moment thường gợi ý Present Continuous.',
+   'Past Simple':'Past Simple nói về hành động đã kết thúc trong quá khứ. Hãy chú ý yesterday, last week, ago và dạng quá khứ của động từ.',
+   'Present Perfect':'Present Perfect nối quá khứ với hiện tại. Cấu trúc cơ bản: have/has + past participle. Since nói mốc thời gian; for nói khoảng thời gian.',
+   'Comparatives & Superlatives':'So sánh hơn dùng để so hai đối tượng; so sánh nhất dùng khi chọn đối tượng nổi bật nhất trong một nhóm. Chú ý -er/-est hoặc more/most.',
+   'Conditional Sentences':'Câu điều kiện loại 1 thường nói khả năng có thể xảy ra: If + hiện tại đơn, will + động từ nguyên mẫu.',
+   'Reading: tìm ý chính':'Đọc câu đầu, câu cuối và các từ lặp lại. Ý chính là thông điệp bao quát, không phải một chi tiết nhỏ.',
+   'Writing: viết đoạn văn':'Dùng cấu trúc mở ý → 2–3 ý hỗ trợ → ví dụ/lý do → câu kết. Ưu tiên câu rõ ràng và liên kết bằng because, however, therefore, for example.',
+   'IELTS/B1 Speaking':'Trả lời theo 3 bước: trả lời trực tiếp → giải thích lý do → đưa ví dụ. Nói rõ, đủ ý và tránh học thuộc máy móc.'};
+  document.getElementById('tutorAnswer').innerHTML='<div class="tutorBubble"><b>🤖 Giảng bài:</b><br>'+bank[topic]+'</div><div class="tutorBubble"><b>🧠 Bài tập nhanh:</b><br>Hãy tự đặt 1 câu dùng kiến thức trên. Sau đó dùng nút AI chữa bài để kiểm tra.</div><button onclick="aiGrade()">🛠️ AI chữa câu trả lời</button>';
+}
+function diyAdminGrantPremiumPrompt(){
+  if(!isCurrentAdmin()){alert('Chỉ Admin mới dùng được chức năng này.');return}
+  const user=prompt('Tên tài khoản cần cấp Premium:'); if(!user)return;
+  const daysRaw=prompt('Số ngày Premium (mặc định 15):','15'); if(daysRaw===null)return;
+  const days=Math.max(1,parseInt(daysRaw,10)||15); diyGrantPremium(user,days);
+  alert('👑 Đã cấp Premium '+days+' ngày cho '+user+'\nCòn hạn: '+diyDaysLeft(user)+' ngày.');
+}
+function diyAdminPremiumStatusPrompt(){
+  if(!isCurrentAdmin()){alert('Chỉ Admin mới dùng được chức năng này.');return}
+  const user=prompt('Tên tài khoản cần kiểm tra:');if(!user)return;
+  const x=diyPremiumInfo(user);alert(x&&x.expiresAt>Date.now()?'👑 Premium đang hoạt động\nCòn '+diyDaysLeft(user)+' ngày.':'🔒 Premium đã hết hạn hoặc chưa được cấp.');
+}
+function diyPatchPremiumAdmin(){
+  if(!isCurrentAdmin())return;
+  const old=window.adminPanel; if(typeof old!=='function')return;
+  // Admin can use this helper from console/UI integrations without changing old account data.
+  window.diyGrantPremium=window.diyGrantPremium;
+  window.diyAdminGrantPremiumPrompt=diyAdminGrantPremiumPrompt;
+  window.diyAdminPremiumStatusPrompt=diyAdminPremiumStatusPrompt;
+}
+document.addEventListener('DOMContentLoaded',()=>{diyMigrateOldPremiumData();setTimeout(diyShowPremiumWelcome,300)});
+</script>
+<style>
+  /* Keep the main app from collapsing when the admin panel opens. */
+  #app, .app, .main, .content, main { min-width: 0; }
+  .main-content, .content-area, .dashboard, .page { width: 100%; max-width: none; min-width: 0; }
+  .admin-panel, #adminPanel { width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }
+  .admin-panel * , #adminPanel * { box-sizing: border-box; max-width: 100%; }
+  @media (max-width: 900px) {
+    .layout, .app-layout, .shell { grid-template-columns: 1fr !important; }
+    aside, .sidebar { width: 100% !important; max-width: 100% !important; }
+  }
+</style>
+<style>
+/* Nút mới: to, thoáng, dễ quét bằng mắt và dễ bấm */
+button{min-height:48px;padding:12px 18px;margin:6px 4px;border:1px solid #315a7e;border-radius:12px;background:#12304a;color:#fff;font-size:14px;font-weight:700;line-height:1.25;cursor:pointer;transition:transform .15s ease,background .15s ease,border-color .15s ease,box-shadow .15s ease}
+button:hover{background:#174364;border-color:#5b9bd5;transform:translateY(-1px);box-shadow:0 5px 14px rgba(0,0,0,.22)}
+button:focus-visible{outline:3px solid #8dccff;outline-offset:2px}
+button:active{transform:translateY(0);box-shadow:none}
+.menu-panel button,.gate button{display:block;width:100%;margin:9px 0;text-align:left;padding:14px 16px}
+.exam-card button,.login-box button{width:100%;margin:8px 0}
+.section-title{margin-top:22px;margin-bottom:10px;padding:12px 14px;border-left:4px solid #5b9bd5;border-radius:9px;background:#0d1d31}
+.small{line-height:1.6}
+@media(max-width:600px){button{min-height:50px;font-size:14px;padding:13px 14px}.menu-panel button,.gate button{padding:14px}.ielts-grid{grid-template-columns:1fr}.ai-grid{grid-template-columns:1fr}}
+</style>
+<style>
+/* Visual refresh: responsive, cleaner and easier to scan */
+ html{background:#07111f;scroll-behavior:auto;overscroll-behavior-y:none}
+ body,#app{align-items:flex-start;overflow:auto;padding:24px 14px;min-height:100vh;-webkit-overflow-scrolling:touch;overscroll-behavior-y:none;touch-action:pan-y}
+.card{width:min(1080px,96vw);max-height:none;min-height:0;padding:26px;border-radius:22px}
+#login,#adminLogin,#gate{width:min(620px,94vw);margin:auto}
+#menu{width:min(1120px,96vw);margin:auto}
+#menu h1{font-size:clamp(24px,4vw,34px)}
+.user-bar{position:sticky;top:8px;z-index:20;backdrop-filter:blur(10px);box-shadow:0 8px 24px #0004}
+.menu-panel{box-shadow:0 10px 28px #0004}
+#studentMenu{max-height:none;overflow:visible}
+#studentMenu .menu-grid{gap:8px}
+#studentMenu .menu-grid button{min-height:42px;padding:9px 8px}
+.content-card{grid-template-columns:180px repeat(2,minmax(0,1fr));min-width:0}
+.exam-card{display:block;width:100%;min-width:0;overflow:hidden}
+.exam-card img,.exam-card video,.content-card img{max-width:100%;height:auto;display:block;border-radius:12px;object-fit:contain}
+.answer,select,textarea{box-sizing:border-box;max-width:100%;font-size:15px}
+.stat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.ielts-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:800px){
+  body,#app{padding:12px 8px}
+  .card{width:100%;padding:18px 14px;border-radius:18px}
+  #menu{width:100%}
+  .content-card{grid-template-columns:1fr}
+  .stat-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .user-bar{position:static;align-items:flex-start;flex-direction:column}
+  .user-bar button{width:100%}
+  #studentMenu .menu-grid,#studentMenu .skills-grid{grid-template-columns:1fr 1fr}
+  .stat-grid,.ielts-grid{grid-template-columns:1fr}
+  .login-tabs{grid-template-columns:1fr 1fr}
+  h1{font-size:25px}
+}
+</style>
+<style>
+/* ADMIN PRO — khu quản trị riêng */
+.admin-launch{display:none!important;width:auto!important;margin:0!important;padding:10px 14px!important;border:1px solid #9b7cff!important;border-radius:12px!important;background:linear-gradient(135deg,#4c1d95,#7c3aed)!important;box-shadow:0 0 18px #7c3aed44!important;font-size:13px!important}
+.admin-launch.show{display:block!important}
+.admin-screen{width:min(1180px,96vw);margin:auto}
+.admin-shell{background:linear-gradient(145deg,#100d24,#0a1628 58%,#08111f);border:1px solid #7048c8;border-radius:24px;padding:22px;box-shadow:0 18px 55px #0008,0 0 35px #7c3aed22;text-align:left}
+.admin-top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px;border-radius:18px;background:linear-gradient(135deg,#21103d,#14243b);border:1px solid #7048c8}
+.admin-brand{display:flex;align-items:center;gap:13px}.admin-badge{width:52px;height:52px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(135deg,#7c3aed,#a855f7);font-size:25px;box-shadow:0 0 22px #7c3aed66}
+.admin-brand h2{margin:0;color:#eadcff}.admin-brand p{margin:4px 0 0;color:#aebbd0;font-size:12px}
+.admin-actions{display:flex;gap:8px;flex-wrap:wrap}.admin-actions button{width:auto;margin:0}.admin-back{background:#102943!important;border-color:#315a7e!important}
+.admin-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0}.admin-stat{padding:15px;border-radius:15px;background:#0d1d31;border:1px solid #284766}.admin-stat b{display:block;font-size:24px;color:#d8b4fe}.admin-stat span{font-size:11px;color:#9fb5c9}
+.admin-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}.admin-box{padding:16px;border-radius:17px;background:#0a1728;border:1px solid #284766}.admin-box h3{margin:0 0 12px;color:#d8b4fe}.admin-account{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px;margin:8px 0;border-radius:13px;background:#0d1d31;border:1px solid #23496b}.admin-account-main{min-width:0}.admin-account-main b{display:block;color:#e8f2ff}.admin-account-main small{color:#8fa7bd}.admin-account-actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}.admin-account-actions button{width:auto;margin:0;padding:9px 11px;font-size:12px;min-height:40px}.premium-btn{background:linear-gradient(135deg,#6d28d9,#a855f7)!important;border-color:#a78bfa!important}.remove-btn{background:#7f1d2d!important;border-color:#b91c1c!important}.reset-btn{background:#174364!important;border-color:#4d8fc5!important}.danger-btn{background:#7f1d2d!important;border-color:#ef4444!important}
+.admin-note{padding:12px;border-radius:12px;background:#120d25;border:1px solid #4c2a78;color:#bcaed0;font-size:12px;line-height:1.6}.admin-empty{padding:18px;text-align:center;color:#8fa7bd;border:1px dashed #315a7e;border-radius:12px}
+@media(max-width:850px){.admin-grid{grid-template-columns:1fr}.admin-stats{grid-template-columns:1fr 1fr}.admin-top{align-items:flex-start;flex-direction:column}.admin-actions{width:100%}.admin-actions button{flex:1}}
+@media(max-width:560px){.admin-shell{padding:14px;border-radius:18px}.admin-stats{grid-template-columns:1fr}.admin-account{align-items:flex-start;flex-direction:column}.admin-account-actions{width:100%;justify-content:stretch}.admin-account-actions button{flex:1}}
+</style>
+<style>
+/* v94 UI polish: cleaner cards, clearer hierarchy, better test readability */
+.learningHub{border-radius:26px!important;padding:24px!important;background:linear-gradient(145deg,#17122d,#2d1b59 55%,#0b5c78)!important;box-shadow:0 20px 55px rgba(20,10,55,.25)!important}
+.learningHub h3{font-size:clamp(22px,3vw,32px)!important;letter-spacing:-.3px}
+.learningHub p{font-size:15px!important;max-width:760px}
+.learningHubGrid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))!important;gap:14px!important}
+.learningHubGrid button{min-height:76px!important;border-radius:18px!important;font-size:15px!important;box-shadow:0 8px 20px rgba(0,0,0,.16)!important;transition:transform .18s ease,filter .18s ease}
+.learningHubGrid button:hover{transform:translateY(-3px);filter:brightness(1.08)}
+.testResult{border-radius:22px!important;box-shadow:0 12px 28px rgba(0,0,0,.15)}
+.scheduleDay{border-radius:18px!important;padding:16px!important;box-shadow:0 8px 22px rgba(0,0,0,.12)}
+.tutorChat{border-radius:24px!important;box-shadow:0 16px 40px rgba(20,10,55,.24)}
+.tutorBubble{border-radius:16px!important}
+.premiumCountdown{padding:10px 12px;border-radius:12px;background:#ffffff0c}
+.diagnosticQuestion{padding:18px!important;border-radius:20px!important;margin:14px 0!important;background:linear-gradient(145deg,#fff,#f7f4ff)!important;border:1px solid #e7e0ff!important;box-shadow:0 8px 22px rgba(63,48,140,.08)!important}
+.diagnosticQuestion h4{font-size:17px!important;line-height:1.55!important;margin:0 0 14px!important;color:#202033!important}
+.diagnosticQuestion label{display:block!important;padding:12px 14px!important;margin:8px 0!important;border:1px solid #e7e7ef!important;border-radius:14px!important;background:#fff!important;cursor:pointer!important;transition:.16s ease!important}
+.diagnosticQuestion label:hover{border-color:#8b5cf6!important;background:#faf7ff!important;transform:translateX(2px)}
+.diagnosticQuestion input:checked+span{font-weight:800;color:#5b21b6}
+@media(max-width:650px){.learningHub{padding:17px!important}.learningHubGrid{grid-template-columns:1fr!important}.diagnosticQuestion{padding:14px!important}.diagnosticQuestion h4{font-size:16px!important}}
+</style>
+</head>
+<body id="app">
+
+<div class="card" id="login">
+  <h1>🔐 DIY ENGLISH 8</h1>
+  <div class="sub">ĐĂNG NHẬP ĐỂ VÀO KHU LUYỆN THI</div>
+  <div class="login-box">
+    <div class="login-tabs"><button id="loginTab" class="active" onclick="switchAuth('login')">ĐĂNG NHẬP</button><button id="registerTab" onclick="switchAuth('register')">ĐĂNG KÝ</button></div>
+    <input class="answer" id="authUser" autocomplete="username" placeholder="Tên tài khoản">
+    <input class="answer" id="authPass" type="password" autocomplete="current-password" placeholder="Mật khẩu">
+    <button id="authButton" onclick="handleAuth()">🔓 ĐĂNG NHẬP</button>
+    <button type="button" onclick="openAdminLogin()" style="background:#5b2bbd">🛡️ ĐĂNG NHẬP QUẢN TRỊ</button>
+    <div id="loginMsg" class="login-msg"></div>
+    <div class="small">⚠️ Khu quản trị yêu cầu đăng nhập Admin riêng. Chế độ hiện tại là demo cục bộ.</div>
+  </div>
+</div>
+
+<div class="card hidden" id="adminLogin">
+  <h1>🛡️ KHU QUẢN TRỊ</h1>
+  <div class="sub">ĐĂNG NHẬP ADMIN ĐỂ TRUY CẬP QUYỀN QUẢN TRỊ</div>
+  <div class="login-box">
+    <input class="answer" id="adminUser" autocomplete="username" placeholder="Tài khoản Admin">
+    <input class="answer" id="adminPass" type="password" autocomplete="current-password" placeholder="Mật khẩu Admin">
+    <button onclick="handleAdminAuth()">🔐 XÁC THỰC ADMIN</button>
+    <button type="button" onclick="closeAdminLogin()" style="background:#102943;border:1px solid #315a7e">↩️ QUAY LẠI</button>
+    <div id="adminLoginMsg" class="login-msg"></div>
+  </div>
+</div>
+
+<div class="card hidden" id="gate">
+  <h1>📘 DIY ENGLISH 8</h1>
+  <div class="sub">ÔN THI TIẾNG ANH LỚP 8 • 4 KỸ NĂNG</div>
+  <h2>🎓 LUYỆN THI THEO HỌC KỲ</h2>
+  <p class="sub">Giữa kỳ 1 • Cuối kỳ 1 • Giữa kỳ 2 • Cuối kỳ 2</p>
+  <button onclick="openMenu()">🚀 BẮT ĐẦU LUYỆN TẬP</button>
+  <div class="small">Có bài tập mẫu cho Nghe • Nói • Đọc • Viết</div>
+</div>
+
+<div class="card hidden" id="menu">
+  <h1>📚 DIY ENGLISH 8</h1>
+  <div class="sub">Ngân hàng đề bám sát Global Success 8</div>
+  <div class="user-bar"><span>👤 Xin chào, <b id="currentUser">học sinh</b></span><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><button id="adminLaunch" class="admin-launch" onclick="openAdminPanel()">🛡️ Quản trị</button><button onclick="logout()">Đăng xuất</button></div></div>
+  <button class="main-menu-btn" onclick="toggleStudentMenu()" aria-expanded="false">☰ MENU HỌC TẬP <span>⌄</span></button>
+  <style>
+  #studentMenu{padding:10px;display:none;gap:6px;flex-direction:column;border-radius:14px;background:#0a1b2e;border:1px solid #294d6b;box-shadow:0 12px 30px rgba(0,0,0,.28);max-height:58vh;overflow:auto}
+    #studentMenu.open{display:flex}
+    #studentMenu .menu-heading{font-weight:800;font-size:15px;padding:4px 6px 2px}
+  #studentMenu .menu-section{padding:10px;margin:3px 0;border:1px solid #1d4160;border-radius:15px;background:linear-gradient(145deg,#0d2238,#0a1a2c);box-shadow:inset 0 1px 0 #ffffff08}
+  #studentMenu .menu-divider{font-size:11px;font-weight:900;color:#9fd3f7;letter-spacing:.6px;margin:0 0 8px;padding:0;border:0;display:flex;align-items:center;gap:8px}
+  #studentMenu .menu-divider:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,#315a7e,transparent)}
+  #studentMenu button{margin:0;min-height:40px;border-radius:11px;font-size:13px;text-transform:none;padding:9px 11px;background:#102b45;border:1px solid #285678;box-shadow:none}
+  #studentMenu button:hover{background:#153b5c;border-color:#4c8fbd;box-shadow:0 5px 14px #0004}
+  #studentMenu .menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+  #studentMenu .menu-grid button{font-size:12px;padding:8px 6px;min-height:38px}
+  #studentMenu .skills-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  #studentMenu .premium-action{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:48px;padding:11px 13px;border-radius:13px;background:linear-gradient(135deg,#44217d,#6635bd 55%,#3c5fc7)!important;border:1px solid #9b73ed!important;box-shadow:0 8px 22px #6d28d933!important}
+  #studentMenu .premium-action:hover{filter:brightness(1.08);transform:translateY(-1px)}
+  #studentMenu .premium-action .premium-tag{flex:0 0 auto;padding:5px 9px;border-radius:999px;background:#ffd166;color:#2b2100;font-size:10px;font-weight:900}
+  #studentMenu .menu-section.learning-section{background:linear-gradient(145deg,#101e3b,#17285a);border-color:#3e62a5}
+  #studentMenu .menu-section.learning-section button:first-of-type{background:linear-gradient(135deg,#1c4d76,#226aa0);border-color:#4d91c4;font-weight:800}
+  #studentMenu .menu-section.tool-section{background:#0b1c2f}
+  @media(max-width:650px){#studentMenu .menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#studentMenu .skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.menu-section{padding:9px!important}}
+  </style>
+  <div class="menu-panel" id="studentMenu">
+    <div class="menu-heading">📚 HỌC TẬP & LUYỆN THI</div>
+    <button onclick="continueLearning()">▶ Tiếp tục đề gần nhất</button>
+    <button onclick="randomExam()">🎲 Bốc ngẫu nhiên một đề</button>
+    <div class="menu-divider">📝 CHỌN ĐỀ THI</div>
+    <div class="menu-grid">
+      <button onclick="showExam('Giữa kỳ 1 — Đề 1')">Giữa kỳ 1 · Đề 1</button><button onclick="showExam('Giữa kỳ 1 — Đề 2')">Giữa kỳ 1 · Đề 2</button><button onclick="showExam('Giữa kỳ 1 — Đề 3')">Giữa kỳ 1 · Đề 3</button><button onclick="showExam('Giữa kỳ 1 — Đề 4')">Giữa kỳ 1 · Đề 4</button><button onclick="showExam('Giữa kỳ 1 — Đề 5')">Giữa kỳ 1 · Đề 5</button>
+      <button onclick="showExam('Cuối kỳ 1 — Đề 1')">Cuối kỳ 1 · Đề 1</button><button onclick="showExam('Cuối kỳ 1 — Đề 2')">Cuối kỳ 1 · Đề 2</button><button onclick="showExam('Cuối kỳ 1 — Đề 3')">Cuối kỳ 1 · Đề 3</button><button onclick="showExam('Cuối kỳ 1 — Đề 4')">Cuối kỳ 1 · Đề 4</button><button onclick="showExam('Cuối kỳ 1 — Đề 5')">Cuối kỳ 1 · Đề 5</button>
+      <button onclick="showExam('Giữa kỳ 2 — Đề 1')">Giữa kỳ 2 · Đề 1</button><button onclick="showExam('Giữa kỳ 2 — Đề 2')">Giữa kỳ 2 · Đề 2</button><button onclick="showExam('Giữa kỳ 2 — Đề 3')">Giữa kỳ 2 · Đề 3</button><button onclick="showExam('Giữa kỳ 2 — Đề 4')">Giữa kỳ 2 · Đề 4</button><button onclick="showExam('Giữa kỳ 2 — Đề 5')">Giữa kỳ 2 · Đề 5</button>
+      <button onclick="showExam('Cuối kỳ 2 — Đề 1')">Cuối kỳ 2 · Đề 1</button><button onclick="showExam('Cuối kỳ 2 — Đề 2')">Cuối kỳ 2 · Đề 2</button><button onclick="showExam('Cuối kỳ 2 — Đề 3')">Cuối kỳ 2 · Đề 3</button><button onclick="showExam('Cuối kỳ 2 — Đề 4')">Cuối kỳ 2 · Đề 4</button><button onclick="showExam('Cuối kỳ 2 — Đề 5')">Cuối kỳ 2 · Đề 5</button>
+    </div>
+    <div class="menu-section learning-section"><div class="menu-divider">🎯 LUYỆN TỪNG KỸ NĂNG</div><div class="menu-grid skills-grid"><button onclick="practiceSection('Grammar')">🧠 Grammar</button><button onclick="practiceSection('Reading')">📖 Reading</button><button onclick="practiceSection('Writing')">✍️ Writing</button><button onclick="showIELTSPanel()">🇬🇧 IELTS B1</button></div></div>
+    <div class="menu-section"><div class="menu-divider">🌍 PREMIUM</div><button class="premium-action" onclick="openEnglishChat()"><span>🌍💬 Nói chuyện 1-1 với người nước ngoài</span><span class="premium-tag">PREMIUM</span></button></div>
+    <div class="menu-section learning-section"><div class="menu-divider">🎓 LỘ TRÌNH & ĐÁNH GIÁ</div><button onclick="openLearningHub()">🎯 Test đánh giá học lực & lộ trình</button></div>
+    <div class="menu-section"><div class="menu-divider">📊 THEO DÕI KẾT QUẢ</div><div class="menu-grid"><button onclick="showPanel('historyPanel')">📋 Lịch sử điểm</button><button onclick="showPanel('statsPanel')">📈 Thống kê học lực</button><button onclick="showPanel('weakPanel')">🤖 AI tìm phần yếu</button></div></div>
+    <div class="menu-section tool-section"><div class="menu-divider">⚙️ CÔNG CỤ</div><div class="menu-grid"><button onclick="showAnswerKey()">🔑 Xem đáp án sau khi nộp</button><button onclick="logout()">🚪 Đăng xuất</button></div></div>
+  </div>
+  <div class="menu-panel" id="adminPanel" style="display:none"></div>
+  <div class="menu-panel" id="historyPanel"><h3>📋 LỊCH SỬ ĐIỂM</h3><div id="history">Chưa có kết quả được lưu.</div></div>
+  <div class="menu-panel" id="statsPanel"><h3>📈 BIỂU ĐỒ THỐNG KÊ HỌC LỰC</h3><div id="statsChart" style="height:220px;display:flex;align-items:flex-end;gap:10px;padding:12px 4px;border-bottom:1px solid #315a7e"></div><div id="statsText" class="small">Chưa có dữ liệu điểm.</div></div>
+  <div class="menu-panel" id="weakPanel"><h3>🤖 AI PHÂN TÍCH PHẦN YẾU</h3><div id="weakAnalysis">Hãy làm ít nhất một bài thi để AI phân tích.</div></div>
+  <div class="menu-panel" id="ieltsPanel"><h3>🇬🇧 IELTS B1 — LUYỆN 4 KỸ NĂNG</h3><div class="ielts-panel"><p><b>Mục tiêu:</b> xây nền B1 theo Listening, Reading, Writing và Speaking.</p><div class="ielts-grid"><div class="ielts-box"><b>🎧 Listening</b><span class="ielts-tip">Nghe thông tin chính, số liệu, địa điểm và ý kiến.</span></div><div class="ielts-box"><b>📖 Reading</b><span class="ielts-tip">Tìm thông tin, True/False/Not Given và từ đồng nghĩa.</span></div><div class="ielts-box"><b>✍️ Writing</b><span class="ielts-tip">Luyện đoạn văn và cách trình bày ý kiến rõ ràng.</span></div><div class="ielts-box"><b>🎤 Speaking</b><span class="ielts-tip">Trả lời Part 1–2–3 ở mức phù hợp B1.</span></div></div><p class="small">📌 IELTS dùng thang điểm 9 và có điểm riêng cho 4 kỹ năng; CEFR B1 chỉ là mức tham chiếu, không phải quy đổi 1–1.</p><button onclick="startIELTSB1()">🚀 BẮT ĐẦU LUYỆN IELTS B1</button></div></div>
+  <div class="section-title"><b>📘 KHU VỰC HỌC TẬP</b></div>
+  <p class="small">Mở <b>☰ MENU HỌC TẬP</b> để chọn đề, luyện kỹ năng và xem điểm.</p>
+  <div id="exam" class="exam-card" style="display:none"></div>
+  <button onclick="aiGrade()">🤖 AI CHỮA BÀI CHI TIẾT</button>
+  <div id="ai" class="exam-card" style="display:none"></div>
+  <div id="englishChat" class="menu-panel" style="text-align:left"></div>
+</div>
+
+<script>
+function isCurrentAdmin(){return localStorage.getItem('diyEnglishAdmin')==='true' && localStorage.getItem('diyEnglishCurrentUser')==='maiphucduyadmin'}
+function adminTogglePremium(encodedUser){
+  if(!isCurrentAdmin()){alert('⛔ Bạn không có quyền Admin.');return}
+  const user=decodeURIComponent(String(encodedUser||'')).trim();
+  if(!user||user==='maiphucduyadmin')return;
+  let users={};
+  try{users=JSON.parse(localStorage.getItem('diyEnglishUsers')||'{}')||{}}catch(e){users={}}
+  if(!Object.prototype.hasOwnProperty.call(users,user)){alert('❌ Không tìm thấy tài khoản: '+user);return}
+  let premium=[];
+  try{premium=JSON.parse(localStorage.getItem('diyEnglishPremiumUsers')||'[]')||[]}catch(e){premium=[]}
+  const info=diyPremiumInfo(user);
+  const has=!!(info&&Number(info.expiresAt)>Date.now());
+  if(has){
+    premium=premium.filter(x=>x!==user);
+    localStorage.removeItem('diyEnglishPremiumInfo_'+user);
+    localStorage.removeItem('diyEnglishPremiumDevice_'+user);
+    sessionStorage.removeItem('diyPremiumWelcomeSeen_'+user);
+    localStorage.setItem('diyEnglishPremiumUsers',JSON.stringify(premium));
+    alert('↩️ Đã gỡ Premium của '+user+'.');
+  }else{
+    const raw=prompt('👑 Cấp Premium cho '+user+' trong bao nhiêu ngày?\nNhập số ngày, ví dụ: 15, 30, 60','15');
+    if(raw===null)return;
+    const days=Number(String(raw).trim());
+    if(!Number.isFinite(days)||days<1){alert('❌ Số ngày không hợp lệ. Hãy nhập số nguyên từ 1 trở lên.');return}
+    let info;try{info=diyGrantPremium(user,Math.floor(days))}catch(e){alert('❌ Không thể cấp Premium: '+e.message);return}
+    premium=JSON.parse(localStorage.getItem('diyEnglishPremiumUsers')||'[]');
+    diyEnsureAccountLearningData(user);
+    sessionStorage.removeItem('diyPremiumWelcomeSeen_'+user);
+    alert('👑 ĐÃ CẤP PREMIUM\n\nTài khoản: '+user+'\n⏳ Cấp thêm: '+Math.floor(days)+' ngày\n📅 Hết hạn: '+new Date(info.expiresAt).toLocaleString('vi-VN')+'\n⌛ Còn: '+diyDaysLeft(user)+' ngày');
+  }
+  adminDashboard();
+}
+
+function adminResetDevice(encodedUser){
+  if(!isCurrentAdmin()){alert('⛔ Bạn không có quyền Admin.');return}
+  const user=decodeURIComponent(String(encodedUser||'')).trim();if(!user)return;
+  if(!diyPremiumActive(user)){alert('⚠️ Tài khoản này chưa có Premium đang hoạt động.');return}
+  localStorage.removeItem('diyEnglishPremiumDevice_'+user);
+  alert('✅ Đã xóa liên kết thiết bị của '+user+'.\nThiết bị tiếp theo đăng nhập Premium sẽ được liên kết lại.');
+  adminDashboard();
+}
+
+function adminExtendPremium(encodedUser){
+  if(!isCurrentAdmin())return;
+  const user=decodeURIComponent(String(encodedUser||'')).trim();if(!user)return;
+  if(!diyPremiumActive(user)){alert('⚠️ Premium đã hết hạn. Hãy cấp Premium lại.');return}
+  const raw=prompt('⏳ Gia hạn Premium cho '+user+' thêm bao nhiêu ngày?','15');if(raw===null)return;
+  const days=Math.floor(Number(String(raw).trim()));
+  if(!Number.isFinite(days)||days<1){alert('❌ Số ngày không hợp lệ.');return}
+  try{const info=diyGrantPremium(user,days);alert('✅ Đã gia hạn '+days+' ngày.\n📅 Hết hạn: '+new Date(info.expiresAt).toLocaleString('vi-VN'));adminDashboard()}catch(e){alert('❌ '+e.message)}
+}
+function adminResetDevice(encodedUser){
+  if(!isCurrentAdmin()){alert('⛔ Chỉ Admin cấp cao nhất mới được thực hiện.');return;}
+  const user=decodeURIComponent(encodedUser||'');
+  if(!user||user==='maiphucduyadmin')return;
+  localStorage.removeItem('diyEnglishPremiumDevice_'+user);
+  localStorage.setItem('diyEnglishPremiumReset_'+user,String(Date.now()));
+  adminDashboard();
+  alert('✅ Đã đặt lại thiết bị cho '+user+'. Lần đăng nhập Premium tiếp theo sẽ liên kết với thiết bị mới.');
+}
+function openAdminPanel(){
+  if(!isCurrentAdmin()){alert('⛔ Chỉ Admin cấp cao nhất mới được truy cập.');return;}
+  document.getElementById('gate').classList.add('hidden');
+  document.getElementById('menu').classList.remove('hidden');
+  document.getElementById('studentMenu').style.display='none';
+  document.getElementById('adminPanel').style.display='block';
+  adminDashboard();
+  window.scrollTo({top:0,behavior:'auto'});
+}
+function closeAdminPanel(){
+  document.getElementById('adminPanel').style.display='none';
+  document.getElementById('gate').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'auto'});
+}
+function openMenu(){
+  document.getElementById("gate").classList.add("hidden");
+  document.getElementById("menu").classList.remove("hidden");
+}
+let authMode='login';
+function switchAuth(mode){
+  authMode=mode;
+  document.getElementById('loginTab').classList.toggle('active',mode==='login');
+  document.getElementById('registerTab').classList.toggle('active',mode==='register');
+  document.getElementById('authButton').textContent=mode==='login'?'🔓 ĐĂNG NHẬP':'📝 TẠO TÀI KHOẢN';
+  document.getElementById('authPass').autocomplete=mode==='login'?'current-password':'new-password';
+  document.getElementById('loginMsg').textContent='';
+}
+function handleAuth(){
+  const user=document.getElementById('authUser').value.trim();
+  const pass=document.getElementById('authPass').value;
+  const msg=document.getElementById('loginMsg');
+  if(!/^[A-Za-z0-9_]{3,20}$/.test(user)){msg.textContent='Tên tài khoản cần 3–20 ký tự: chữ, số hoặc dấu _. ';return;}
+  if(pass.length<6){msg.textContent='Mật khẩu cần ít nhất 6 ký tự.';return;}
+  const users=JSON.parse(localStorage.getItem('diyEnglishUsers')||'{}');
+  if(authMode==='register'){
+    if(users[user]){msg.textContent='Tài khoản này đã tồn tại.';return;}
+    users[user]=pass;localStorage.setItem('diyEnglishUsers',JSON.stringify(users));
+    localStorage.setItem('diyEnglishCurrentUser',user);showLoggedIn(user);return;
+  }
+  if(users[user]!==pass){msg.textContent='Sai tên tài khoản hoặc mật khẩu.';return;}
+  localStorage.setItem('diyEnglishCurrentUser',user);showLoggedIn(user);
+}
+function adminLogin(){
+  const user='maiphucduyadmin',pass='DIY';
+  if(!checkPremiumDevice(user))return;
+  localStorage.setItem('diyEnglishCurrentUser',user);
+  localStorage.setItem('diyEnglishAdmin','true');
+  showLoggedIn(user);
+}
+function openAdminLogin(){
+  document.getElementById('login').classList.add('hidden');
+  document.getElementById('adminLogin').classList.remove('hidden');
+  document.getElementById('adminUser').focus();
+  document.getElementById('adminLoginMsg').textContent='';
+}
+function closeAdminLogin(){
+  document.getElementById('adminLogin').classList.add('hidden');
+  document.getElementById('login').classList.remove('hidden');
+  document.getElementById('adminUser').value='';
+  document.getElementById('adminPass').value='';
+  document.getElementById('adminLoginMsg').textContent='';
+}
+function handleAdminAuth(){
+  const user=document.getElementById('adminUser').value.trim();
+  const pass=document.getElementById('adminPass').value;
+  const msg=document.getElementById('adminLoginMsg');
+  if(user!=='maiphucduyadmin'||pass!=='DIY'){
+    msg.textContent='⛔ Sai tài khoản hoặc mật khẩu Admin.';
+    return;
+  }
+  adminLogin();
+  document.getElementById('adminLogin').classList.add('hidden');
+}
+function showLoggedIn(user){
+  const isAdmin=isCurrentAdmin();
+  document.getElementById('currentUser').textContent=user+(isAdmin?' 🛡️ ADMIN':'');
+  const adminPanel=document.getElementById('adminPanel');
+  if(adminPanel)adminPanel.style.display='none';
+  const adminLaunch=document.getElementById('adminLaunch');
+  if(adminLaunch)adminLaunch.classList.toggle('show',isAdmin);
+  document.getElementById('login').classList.add('hidden');
+  document.getElementById('gate').classList.remove('hidden');
+  document.getElementById('loginMsg').textContent='';
+  loadHistory();
+  updateLearningPanels();
+  diyMigrateOldPremiumData();
+  diyEnsureAccountLearningData(user);
+  /* keep the existing account/history/premium data intact; only add missing learning metadata */
+  diyEnsureDiagnosticForNewUser(user);
+  setTimeout(diyShowPremiumWelcome,180);
+  setTimeout(diyPromptDiagnosticIfNeeded,500);
+}
+function logout(){
+  localStorage.removeItem('diyEnglishCurrentUser');
+  localStorage.removeItem('diyEnglishAdmin');
+  document.getElementById('menu').classList.add('hidden');
+  const adminPanel=document.getElementById('adminPanel');if(adminPanel)adminPanel.style.display='none';
+  const adminLaunch=document.getElementById('adminLaunch');if(adminLaunch)adminLaunch.classList.remove('show');
+  document.getElementById('gate').classList.add('hidden');
+  document.getElementById('login').classList.remove('hidden');
+  document.getElementById('authPass').value='';
+  document.getElementById('loginMsg').textContent='Đã đăng xuất.';
+  switchAuth('login');
+}
+function restoreLogin(){
+  const user=localStorage.getItem('diyEnglishCurrentUser');
+  if(user){const isAdmin=isCurrentAdmin();document.getElementById('currentUser').textContent=user+(isAdmin?' 🛡️ ADMIN':'');const adminPanel=document.getElementById('adminPanel');if(adminPanel)adminPanel.style.display='none';const adminLaunch=document.getElementById('adminLaunch');if(adminLaunch)adminLaunch.classList.toggle('show',isAdmin);document.getElementById('login').classList.add('hidden');document.getElementById('gate').classList.remove('hidden');loadHistory();updateLearningPanels();diyMigrateOldPremiumData();diyEnsureDiagnosticForNewUser(user);setTimeout(diyPromptDiagnosticIfNeeded,500);}
+}
+function adminDashboard(){
+  if(!isCurrentAdmin()){alert('⛔ Chỉ Admin cấp cao nhất mới được truy cập.');return;}
+  let users={};try{users=JSON.parse(localStorage.getItem('diyEnglishUsers')||'{}')||{}}catch(e){users={}}
+  const keys=Object.keys(users);
+  let histories=[];keys.forEach(u=>{try{const h=JSON.parse(localStorage.getItem('diyEnglishHistory_'+u)||'[]');if(Array.isArray(h))histories=histories.concat(h)}catch(e){}});
+  let premium=[];try{premium=JSON.parse(localStorage.getItem('diyEnglishPremiumUsers')||'[]');if(!Array.isArray(premium))premium=[]}catch(e){premium=[]}
+  const rows=keys.length?keys.map(u=>{const info=diyPremiumInfo(u),active=!!(info&&Number(info.expiresAt)>Date.now()),legacy=premium.includes(u)&&!info,isPremium=active||legacy,safe=encodeURIComponent(u),expiry=active?new Date(info.expiresAt).toLocaleString('vi-VN'):(legacy?'Chưa có hạn cũ':'Chưa có hạn'),left=active?Math.max(0,Math.ceil((Number(info.expiresAt)-Date.now())/86400000)):0;return `<div class="admin-account"><div class="admin-account-main"><b>👤 ${u}</b><small>${active?'💎 PREMIUM • Còn '+left+' ngày • Hết hạn '+expiry:legacy?'⚠️ PREMIUM cũ • Chưa có hạn':'🆓 Tài khoản miễn phí'}</small></div><div class="admin-account-actions"><button class="${isPremium?'remove-btn':'premium-btn'}" onclick="adminTogglePremium('${safe}')">${isPremium?'↩️ GỠ PREMIUM':'👑 CẤP PREMIUM'}</button>${active?`<button class="reset-btn" onclick="adminResetDevice('${safe}')">🔄 ĐỔI THIẾT BỊ</button><button class="premium-btn" onclick="adminExtendPremium('${safe}')">⏳ GIA HẠN</button>`:''}${legacy?`<button class="premium-btn" onclick="adminConvertLegacyPremium('${safe}')">📅 ĐẶT HẠN</button>`:''}</div></div>`;}).join(''):'<div class="admin-empty">Chưa có tài khoản người dùng.</div>';
+  const premiumCount=keys.filter(u=>{const x=diyPremiumInfo(u);return !!(x&&Number(x.expiresAt)>Date.now())}).length;
+  document.getElementById('adminPanel').innerHTML=`<div class="admin-screen"><div class="admin-shell"><div class="admin-top"><div class="admin-brand"><div class="admin-badge">🛡️</div><div><h2>ADMIN CONTROL CENTER</h2><p>Quản trị hệ thống • Quyền cao nhất • DIY ENGLISH 8</p></div></div><div class="admin-actions"><button class="admin-back" onclick="closeAdminPanel()">← Khu học tập</button><button class="danger-btn" onclick="adminClearHistories()">🗑️ XÓA LỊCH SỬ</button></div></div><div class="admin-stats"><div class="admin-stat"><b>${keys.length}</b><span>👥 TÀI KHOẢN</span></div><div class="admin-stat"><b>${premiumCount}</b><span>💎 PREMIUM</span></div><div class="admin-stat"><b>${histories.length}</b><span>📝 LƯỢT THI</span></div><div class="admin-stat"><b>1</b><span>🛡️ ADMIN</span></div></div><div class="admin-grid"><section class="admin-box"><h3>👥 QUẢN LÝ TÀI KHOẢN</h3>${rows}</section><section class="admin-box"><h3>⚙️ QUẢN TRỊ HỆ THỐNG</h3><div class="admin-note"><b>💎 Premium</b><br>Cấp hoặc gỡ Premium cho từng tài khoản. Tài khoản Premium được liên kết với thiết bị hiện tại theo cơ chế demo.</div><div class="admin-note" style="margin-top:10px"><b>🔄 Đổi thiết bị</b><br>Dùng nút “ĐỔI THIẾT BỊ” để xóa liên kết cũ. Lần đăng nhập Premium tiếp theo sẽ nhận thiết bị mới.</div><div class="admin-note" style="margin-top:10px"><b>🔐 Quyền Admin</b><br>Khu này chỉ hiện với tài khoản <b>maiphucduyadmin</b>. Giao diện tách riêng để dễ quản lý.</div><button class="danger-btn" onclick="adminClearHistories()" style="margin-top:12px">🗑️ XÓA TOÀN BỘ LỊCH SỬ ĐIỂM DEMO</button></section></div><p class="small" style="margin:14px 2px 0">⚠️ Đây vẫn là hệ thống frontend demo dùng localStorage. Muốn bảo mật thật cần máy chủ/database và xác thực phía server.</p></div></div>`;
+}
+function adminExtendPremium(encodedUser){
+  if(!isCurrentAdmin()){alert('⛔ Chỉ Admin mới được thực hiện.');return}
+  const user=decodeURIComponent(encodedUser||'');if(!user||user==='maiphucduyadmin')return;
+  const raw=prompt('⏳ Gia hạn Premium cho '+user+' thêm bao nhiêu ngày?','15');
+  if(raw===null)return;
+  const days=Number(String(raw).trim());
+  if(!Number.isFinite(days)||days<1){alert('❌ Số ngày không hợp lệ.');return}
+  const info=diyGrantPremium(user,Math.floor(days));
+  sessionStorage.removeItem('diyPremiumWelcomeSeen_'+user);
+  alert('✅ Đã gia hạn '+Math.floor(days)+' ngày cho '+user+'\n⏳ Còn tổng cộng: '+diyDaysLeft(user)+' ngày\n📅 Hết hạn: '+new Date(info.expiresAt).toLocaleString('vi-VN'));
+  adminDashboard();
+}
+function adminConvertLegacyPremium(encodedUser){
+  if(!isCurrentAdmin())return;
+  const user=decodeURIComponent(String(encodedUser||'')).trim();if(!user)return;
+  const raw=prompt('📅 Premium cũ chưa có hạn. Đặt lại hạn trong bao nhiêu ngày?','15');if(raw===null)return;
+  const days=Math.floor(Number(String(raw).trim()));
+  if(!Number.isFinite(days)||days<1){alert('❌ Số ngày không hợp lệ.');return}
+  try{const info=diyGrantPremium(user,days);sessionStorage.removeItem('diyPremiumWelcomeSeen_'+user);alert('✅ Đã đặt hạn Premium cho '+user+'\n⏳ '+days+' ngày\n📅 Hết hạn: '+new Date(info.expiresAt).toLocaleString('vi-VN'));adminDashboard()}catch(e){alert('❌ Lỗi: '+e.message)}
+}
+function adminClearHistories(){
+  if(!isCurrentAdmin()){alert('⛔ Chỉ Admin mới được thực hiện.');return;}
+  if(!confirm('Xóa toàn bộ lịch sử điểm của các tài khoản trên trình duyệt này?'))return;
+  const users=JSON.parse(localStorage.getItem('diyEnglishUsers')||'{}');
+  Object.keys(users).forEach(u=>localStorage.removeItem('diyEnglishHistory_'+u));
+  localStorage.removeItem('diyEnglishLastAnalysis');
+  loadHistory();updateLearningPanels();adminDashboard();
+  alert('✅ Đã xóa lịch sử điểm demo.');
+}
+function historyKey(){return 'diyEnglishHistory_'+(localStorage.getItem('diyEnglishCurrentUser')||'guest');}
+function loadHistory(){
+  const box=document.getElementById('history');if(!box)return;
+  const rows=JSON.parse(localStorage.getItem(historyKey())||'[]');
+  box.innerHTML=rows.length?rows.slice().reverse().map(x=>`<div class="history-item"><b>${x.term}</b> — ${x.score}/100 <span class="small">${x.date}</span>${x.grammar!=null?`<div class="small">🎧 ${x.listening}/5 · 📖 ${x.reading}/5 · 🧠 ${x.grammar}/40 · 🎤 ${x.speaking}/4 · ✍️ ${x.writing}/15</div>`:''}</div>`).join(''):'Chưa có kết quả được lưu.';
+}
+function toggleStudentMenu(){const m=document.getElementById('studentMenu');m.style.display=m.style.display==='block'?'none':'block';}
+function showPanel(id){['historyPanel','statsPanel','weakPanel'].forEach(x=>{const p=document.getElementById(x);if(p)p.style.display=x===id?'block':'none';});}
+function practiceSection(section){
+  const map={Grammar:'Giữa kỳ 1 — Đề 1',Reading:'Giữa kỳ 2 — Đề 1',Writing:'Cuối kỳ 2 — Đề 1'};
+  showExam(map[section]||'Giữa kỳ 1 — Đề 1');
+  setTimeout(()=>{const ex=document.getElementById('exam');if(ex)ex.scrollIntoView({behavior:'smooth',block:'start'});},50);
+}
+function showIELTSPanel(){
+  ['historyPanel','statsPanel','weakPanel'].forEach(x=>{const p=document.getElementById(x);if(p)p.style.display='none';});
+  const p=document.getElementById('ieltsPanel');if(p)p.style.display='block';
+}
+function openEnglishChat(){
+  ['historyPanel','statsPanel','weakPanel','ieltsPanel'].forEach(x=>{const p=document.getElementById(x);if(p)p.style.display='none';});
+  const p=document.getElementById('englishChat');
+  if(!p)return;
+  if(!diyRequirePremium())return;
+  p.style.display='block';
+  p.innerHTML=`<div style="text-align:center;padding:18px 8px">
+    <div style="font-size:38px">🌍💬</div>
+    <h3 style="margin:8px 0;color:#d8b4fe">NÓI CHUYỆN 1-1 • PREMIUM</h3>
+    <div style="display:inline-block;padding:4px 10px;border-radius:999px;background:#ffd166;color:#241800;font-weight:800;font-size:11px">PREMIUM</div>
+    <p style="color:#c7d8e8;line-height:1.6;margin:14px auto;max-width:460px">Bạn đang ở khu hội thoại Premium. Hãy chọn chủ đề và trò chuyện 1-1 bằng tiếng Anh; hệ thống sẽ phản hồi, gợi ý sửa lỗi và hỗ trợ giọng nói.</p>
+    <div style="padding:12px;border-radius:12px;background:#0d1d31;border:1px solid #5b2bbd;text-align:left;max-width:460px;margin:0 auto 12px">
+      <b style="color:#d8b4fe">✨ Premium bao gồm</b>
+      <div class="small">🎙️ Nói bằng microphone<br>🤖 AI hội thoại 1-1<br>💡 Gợi ý sửa câu<br>🔊 Nghe lại câu tiếng Anh</div>
+    </div>
+    <div class="small">👑 Premium đang hoạt động • còn ${diyDaysLeft()} ngày</div>
+  </div>`;
+}
+function showPremiumNotice(){
+  alert('🔒 Tính năng này đang bị khóa vì thuộc gói PREMIUM. Trong bản demo hiện tại chưa kết nối thanh toán thật.');
+}
+function chatReply(text,topic){
+  const t=text.toLowerCase();
+  const fixes=[];
+  if(/\bi am (go|play|like)\b/.test(t))fixes.push('Try: I am going / I play / I like.');
+  if(/\bi goes\b/.test(t))fixes.push('Try: I go.');
+  if(/\bhe go\b|\bshe go\b/.test(t))fixes.push('Try: he goes / she goes.');
+  if(!text.trim())return 'Please say something in English 😊';
+  const replyBank={
+    'Making friends':'Nice to meet you! What do you usually do with your friends after school?',
+    'School life':'That sounds interesting! What is your favourite subject at school, and why?',
+    'Hobbies':'Cool! How often do you do your hobby, and what do you like about it?',
+    'Travel':'Great! Where would you like to travel one day, and what would you like to see?',
+    'Food':'Yummy! What food do you like most, and when do you usually eat it?',
+    'Life in the countryside':'That sounds nice! Would you like to live in the countryside in the future? Why?'
+  };
+  return (fixes.length?'💡 '+fixes.join(' ')+' ':'')+replyBank[topic];
+}
+function sendEnglishChat(){
+  const input=document.getElementById('chatInput'),log=document.getElementById('chatLog');if(!input||!log)return;
+  const text=input.value.trim();if(!text)return;
+  const topic=document.getElementById('chatTopic')?.value||'Making friends';
+  log.innerHTML+=`<div style="margin-top:8px"><b>🧑 You:</b> ${text.replace(/[<>]/g,'')}</div>`;
+  const reply=chatReply(text,topic);window.lastEnglishChat=reply;
+  log.innerHTML+=`<div style="margin-top:8px"><b>🤖 Alex:</b> ${reply}</div>`;input.value='';log.scrollTop=log.scrollHeight;
+  if('speechSynthesis' in window){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(reply.replace(/💡.*?Try:.*?\./,''));u.lang='en-US';u.rate=.9;speechSynthesis.speak(u);}
+}
+function startEnglishChatVoice(){
+  if(!('SpeechRecognition' in window||'webkitSpeechRecognition' in window)){alert('Trình duyệt chưa hỗ trợ nhận giọng nói. Bạn có thể gõ câu trả lời.');return;}
+  const R=window.SpeechRecognition||window.webkitSpeechRecognition,r=new R();r.lang='en-US';r.interimResults=false;r.onresult=e=>{document.getElementById('chatInput').value=e.results[0][0].transcript;sendEnglishChat();};r.start();
+}
+function speakEnglishChatLast(){
+  if(!window.lastEnglishChat||!('speechSynthesis' in window)){alert('Trình duyệt chưa hỗ trợ phát giọng nói.');return;}
+  speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(window.lastEnglishChat);u.lang='en-US';u.rate=.9;speechSynthesis.speak(u);
+}
+function startIELTSB1(){
+  const e=document.getElementById('exam');e.style.display='block';
+  e.innerHTML=`<div class="timer" id="examTimer">⏱️ 30:00</div><h3>🇬🇧 IELTS B1 — MINI TEST</h3><p class="small">Bài luyện 30 phút • 4 kỹ năng • mục tiêu nền B1.</p><button onclick="startExamTimer()">▶ BẮT ĐẦU TÍNH GIỜ 30 PHÚT</button><div id="paper">
+  <div class="section-title"><b>🎧 LISTENING</b></div><p>Listen to the short announcement and answer.</p><button onclick="playIELTSListening(this)">▶ PHÁT BÀI NGHE</button><div id="ieltsListenQ" class="listen-q"><b>1.</b> Where will the students meet?<select class="answer" id="ieltsL1"><option value="">-- Chọn --</option><option value="A">A. At the library</option><option value="B">B. At the sports centre</option><option value="C">C. At the school gate</option></select><b>2.</b> What time will they meet?<input class="answer" id="ieltsL2" placeholder="Ví dụ: 8:30" /></div>
+  <div class="section-title"><b>📖 READING</b></div><div class="exam-card" style="display:block"><p><b>Community gardens</b> are becoming popular in some towns. Local people share a small piece of land where they grow vegetables and flowers. The gardens provide fresh food, but they also give neighbours a chance to meet and work together. Some schools use community gardens to teach students about nature, healthy food and responsibility. However, these projects need regular care, so volunteers must work together and follow a simple schedule.</p></div><div class="listen-q"><b>3.</b> What do people grow in the gardens?<select class="answer" id="ieltsR1"><option value="">-- Chọn --</option><option value="A">A. Only trees</option><option value="B">B. Vegetables and flowers</option><option value="C">C. Rice</option></select><b>4.</b> True or False: Community gardens can help neighbours meet each other.<select class="answer" id="ieltsR2"><option value="">-- Chọn --</option><option value="T">True</option><option value="F">False</option></select></div>
+  <div class="section-title"><b>✍️ WRITING</b></div><p>Write <b>80–100 words</b>: <i>Describe one activity you enjoy doing with friends and explain why it is useful.</i></p><textarea class="answer" id="ieltsWrite" rows="6" placeholder="Write your answer here..."></textarea>
+  <div class="section-title"><b>🎤 SPEAKING</b></div><p>Speak for about 1 minute: <i>Describe a hobby or activity you enjoy. What do you do, who do you do it with, and why do you like it?</i></p><textarea class="answer" id="ieltsSpeak" rows="4" placeholder="Bạn có thể nói và để Speech Recognition ghi lại..." ></textarea><button onclick="speakIELTS()">🎙️ NHẬN DẠNG GIỌNG NÓI</button>
+  <button onclick="gradeIELTSB1()">✅ CHẤM MINI TEST</button><div id="ieltsResult"></div></div>`;
+  examTimer=null;examSeconds=1800;examLocked=false;updateTimer();
+  e.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function playIELTSListening(btn){
+  const text='Hello everyone. Our school club will meet at the sports centre this Saturday. Please arrive at eight thirty in the morning. Bring a bottle of water and your student card.';
+  if(!('speechSynthesis' in window)){alert('Trình duyệt chưa hỗ trợ phát giọng nói.');return;}
+  speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=.88;btn.textContent='🔊 Đang phát...';u.onend=()=>btn.textContent='▶ PHÁT LẠI BÀI NGHE';speechSynthesis.speak(u);
+}
+function speakIELTS(){
+  if(!('SpeechRecognition' in window||'webkitSpeechRecognition' in window)){alert('Trình duyệt chưa hỗ trợ nhận giọng nói. Bạn có thể tự nhập câu trả lời.');return;}
+  const R=window.SpeechRecognition||window.webkitSpeechRecognition,r=new R();r.lang='en-US';r.interimResults=false;r.onresult=e=>document.getElementById('ieltsSpeak').value=e.results[0][0].transcript;r.start();
+}
+function gradeIELTSB1(){
+  if(examLocked){alert('⛔ Hết giờ — bài đã bị khóa.');return;}
+  const l=document.getElementById('ieltsL1')?.value==='B',time=/8\s*:?\s*30|08\s*:?\s*30/.test(document.getElementById('ieltsL2')?.value||''),r1=document.getElementById('ieltsR1')?.value==='B',r2=document.getElementById('ieltsR2')?.value==='T';
+  const w=(document.getElementById('ieltsWrite')?.value||'').trim(),s=(document.getElementById('ieltsSpeak')?.value||'').trim(),ww=w.split(/\s+/).filter(Boolean),sw=s.split(/\s+/).filter(Boolean);
+  const writing=Math.min(25,Math.round((ww.length>=80&&ww.length<=100?10:ww.length>=60?7:4)+( /because|however|also|first|finally|for example/i.test(w)?5:2)+(ww.length?Math.min(5,new Set(ww.map(x=>x.toLowerCase())).size/Math.max(1,ww.length)*8):0)+(ww.length>=4?5:2)));
+  const speaking=Math.min(25,Math.round((sw.length>=60?10:sw.length>=30?7:sw.length?4:0)+(/because|like|enjoy|prefer|with|why/i.test(s)?5:2)+(sw.length?Math.min(5,new Set(sw.map(x=>x.toLowerCase())).size/Math.max(1,sw.length)*8):0)+(sw.length>=5?5:2)));
+  const total=Math.round(((l?1:0)+(time?1:0)+(r1?1:0)+(r2?1:0))/4*50+writing+speaking);const band=total>=85?5:total>=75?4.5:total>=65?4:total>=55?3.5:3;
+  document.getElementById('ieltsResult').innerHTML=`<div class="score">${total}/100</div><div class="ielts-panel"><h3>📊 KẾT QUẢ IELTS B1 MINI</h3><p><b>Ước tính band luyện tập:</b> ${band}</p><p>🎧 Listening: ${(l?1:0)+(time?1:0)}/2 đúng • 📖 Reading: ${(r1?1:0)+(r2?1:0)}/2 đúng • ✍️ Writing: ${writing}/25 • 🎤 Speaking: ${speaking}/25.</p><p class="small">Đây là điểm luyện tập nội bộ, không phải điểm IELTS chính thức. IELTS chấm riêng Listening, Reading, Writing và Speaking trên thang band 0–9.</p></div>`;
+}
+function randomExam(){
+  const terms=[];
+  ['Giữa kỳ 1','Cuối kỳ 1','Giữa kỳ 2','Cuối kỳ 2'].forEach(t=>{for(let i=1;i<=5;i++)terms.push(`${t} — Đề ${i}`)});
+  showExam(terms[Math.floor(Math.random()*terms.length)]);
+}
+function continueLearning(){
+  const rows=JSON.parse(localStorage.getItem(historyKey())||'[]');
+  if(!rows.length){alert('Chưa có đề nào đã làm. Hãy chọn một đề để bắt đầu.');return;}
+  showExam(rows[rows.length-1].term||'Giữa kỳ 1 — Đề 1');
+  setTimeout(()=>document.getElementById('exam')?.scrollIntoView({behavior:'smooth',block:'start'}),50);
+}
+function updateLearningPanels(){
+  const rows=JSON.parse(localStorage.getItem(historyKey())||'[]');
+  const chart=document.getElementById('statsChart'),text=document.getElementById('statsText'),weak=document.getElementById('weakAnalysis');
+  if(!chart||!text||!weak)return;
+  if(!rows.length){chart.innerHTML='';text.textContent='Chưa có dữ liệu điểm.';weak.innerHTML='Hãy làm ít nhất một bài thi để AI phân tích.';return;}
+  const recent=rows.slice(-8),avg=Math.round(recent.reduce((a,x)=>a+x.score,0)/recent.length);
+  chart.innerHTML=recent.map((x,i)=>`<div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%"><b style="font-size:11px">${x.score}</b><div style="width:70%;height:${Math.max(8,x.score*1.55)}px;background:linear-gradient(180deg,#29a8ff,#1677d2);border-radius:6px 6px 0 0"></div><span style="font-size:9px;margin-top:5px">${i+1}</span></div>`).join('');
+  const level=avg>=90?'Xuất sắc':avg>=80?'Giỏi':avg>=65?'Khá':avg>=50?'Trung bình':'Cần cố gắng';
+  text.innerHTML=`Điểm trung bình ${recent.length} bài gần nhất: <b>${avg}/100</b> — <b>${level}</b>.`;
+  const weakParts=[];
+  const last=JSON.parse(localStorage.getItem('diyEnglishLastAnalysis')||'null');
+  if(last){if(last.grammar<28)weakParts.push(`Ngữ pháp: ${last.grammar}/40 — cần ôn các cấu trúc thường sai.`);if(last.listening<4)weakParts.push(`Listening: ${last.listening}/5 — luyện nghe từ khóa và ý chính.`);if(last.reading<4)weakParts.push(`Reading: ${last.reading}/5 — luyện tìm thông tin và suy luận.`);if(last.speaking<3)weakParts.push(`Speaking: ${last.speaking}/4 tiêu chí — luyện nói đủ ý, lý do và đúng chủ đề.`);if(last.writing<10)weakParts.push(`Writing: ${last.writing}/15 — cải thiện nội dung, ngữ pháp, từ vựng và bố cục.`);}
+  weak.innerHTML=weakParts.length?weakParts.map(x=>`<div class="weak-item">⚠️ ${x}</div>`).join(''):'✅ Chưa thấy phần yếu rõ rệt ở bài gần nhất. Hãy tiếp tục luyện tập để có dữ liệu chính xác hơn.';
+  if(last){weak.innerHTML+=`<div class="small" style="margin-top:10px">📌 AI đang phân tích dựa trên kết quả bài gần nhất; càng làm nhiều đề, thống kê càng hữu ích.</div>`;}
+}
+restoreLogin();
+function showExam(term){
+  const e=document.getElementById("exam");e.style.display="block";
+  window.currentVariant=null;
+  e.innerHTML=`<div class="timer" id="examTimer">⏱️ 45:00</div><h3>📌 ${term} — ĐỀ KIỂM TRA</h3>
+  <p class="small">⏱️ Thời gian mặc định 45 phút. Bạn có thể chọn thời gian phù hợp trước khi bắt đầu.</p>
+  <select class="answer" id="timeLimit"><option value="15">15 phút</option><option value="30">30 phút</option><option value="45" selected>45 phút (tối đa)</option></select>
+  <button onclick="startExamTimer()">▶ BẮT ĐẦU TÍNH GIỜ</button><button type="button" onclick="randomExam()" style="background:#102943;border:1px solid #315a7e">🎲 ĐỔI SANG ĐỀ KHÁC</button>
+  <div id="paper">
+  <div id="examProgress" class="small" style="padding:8px;border:1px solid #23496b;border-radius:9px;background:#0d1d31">📊 Tiến độ: 0/50 câu đã trả lời</div>
+  <div class="section-title"><b>PHẦN I — LISTENING</b></div>
+  <p>${getListeningInfo(term)}</p>
+  <p class="small"><b>Hướng dẫn:</b> Bạn sẽ nghe bài 2 lần. Hãy đọc câu hỏi trước, sau đó chọn đáp án hoặc điền từ khóa nghe được.</p>
+  <button onclick="playListening(this)">▶ PHÁT BÀI NGHE</button><div id="listenQuestions" class="small">▶ Bấm phát bài nghe để nghe. Trong đề thật, bài nghe nên được phát 2 lần.</div>
+  <div class="listen-q"><b>Câu 1.</b> What does Nam enjoy doing in his free time?<select class="answer" id="listen1"><option value="">-- Chọn đáp án --</option><option value="A">A. Reading books</option><option value="B">B. Going shopping</option><option value="C">C. Watching TV</option></select></div>
+  <div class="listen-q"><b>Câu 2.</b> How often does Nam play badminton?<select class="answer" id="listen2"><option value="">-- Chọn đáp án --</option><option value="A">A. Every day</option><option value="B">B. Twice a week</option><option value="C">C. Once a month</option></select></div>
+  <div class="listen-q"><b>Câu 3.</b> Where does Nam's grandmother live?<input class="answer" id="listen3" placeholder="Trả lời bằng một cụm từ tiếng Anh..." /></div>
+  <div class="listen-q"><b>Câu 4.</b> True or False: Nam thinks life in the countryside is boring.<select class="answer" id="listen4"><option value="">-- Chọn --</option><option value="T">True</option><option value="F">False</option></select></div>
+  <div class="listen-q"><b>Câu 5.</b> Why does Nam join school clubs?<input class="answer" id="listen5" placeholder="Trả lời ngắn bằng tiếng Anh..." /></div>
+  <div class="section-title"><b>PHẦN II — SPEAKING</b></div>
+  <p><b>Chủ đề:</b> <span id="speakingTopic">Life in the countryside</span></p>
+  <p>Trình bày khoảng 1–2 phút: mô tả cuộc sống ở nông thôn, nêu ít nhất 2 điều bạn thích hoặc không thích, và giải thích lý do. Sau đó trả lời câu hỏi mở rộng: <i>Would you like to live in the countryside in the future? Why or why not?</i></p>
+  <textarea class="answer" id="speak" rows="3" placeholder="Gõ câu trả lời nói của bạn để AI nhận xét..."></textarea>
+  <button onclick="requestMicrophone()">🎙️ CHO PHÉP MICROPHONE</button><button onclick="startSpeakingRecord()">🔴 BẮT ĐẦU THU GIỌNG</button><button onclick="stopSpeakingRecord()">⏹️ DỪNG THU</button>
+  <div id="speakingStatus" class="small">Chưa cấp quyền microphone. Hãy bấm “CHO PHÉP MICROPHONE”, sau đó chọn <b>Cho phép</b> trong thông báo của trình duyệt.</div>
+  <div id="speakingPlayback" style="display:block;margin-top:12px;padding:14px;border:2px solid #29a8ff;border-radius:12px;background:#0d1d31"><b>🔊 PHÁT LẠI BÀI NÓI</b><div id="speakingPlaybackHint" class="small">Sau khi bấm DỪNG THU, bản ghi sẽ xuất hiện bên dưới.</div><audio id="speakingAudio" controls preload="metadata" style="display:block;width:100%;margin-top:8px"></audio><button type="button" onclick="replaySpeaking()">🔁 PHÁT LẠI TỪ ĐẦU</button></div>
+  <div class="section-title"><b>PHẦN III — READING</b></div>
+  <p><b>Read the passage and answer the questions.</b></p>
+  <div class="exam-card" style="display:block"><p>Life in the countryside can be peaceful and rewarding. Many teenagers enjoy the fresh air, open spaces and close relationships between neighbours. In some villages, young people help their parents grow vegetables, look after animals or take part in community activities. However, country life also has some challenges. Public transport may be limited, and there are usually fewer entertainment centres than in big cities. For this reason, some teenagers prefer city life. Others believe that living in the countryside teaches them useful skills, makes them more responsible and helps them appreciate nature.</p></div>
+  <div class="listen-q"><b>1. True or False:</b> Country life can be peaceful.<select class="answer" id="read1"><option value="">-- Chọn --</option><option value="T">True</option><option value="F">False</option></select></div>
+  <div class="listen-q"><b>2. True or False:</b> There are always many entertainment centres in villages.<select class="answer" id="read2"><option value="">-- Chọn --</option><option value="T">True</option><option value="F">False</option></select></div>
+  <div class="listen-q"><b>3. Multiple choice:</b> What may be limited in the countryside?<select class="answer" id="read3"><option value="">-- Chọn đáp án --</option><option value="A">A. Public transport</option><option>B. Fresh air</option><option>C. Nature</option><option>D. Neighbours</option></select></div>
+  <div class="listen-q"><b>4. Short answer:</b> Name one activity young people may do to help their parents.<input class="answer" id="read4" placeholder="Trả lời bằng tiếng Anh..." /></div>
+  <div class="listen-q"><b>5. Inference:</b> Why do some teenagers prefer city life?<input class="answer" id="read5" placeholder="Trả lời ngắn bằng tiếng Anh..." /></div>
+  <div class="section-title"><b>PHẦN IV — LANGUAGE & GRAMMAR</b></div>
+  <div class="exam-card" style="display:block">
+    <p><b>Câu 1.</b> I enjoy ______ books in my free time.</p>
+    <select class="answer" id="grammar1"><option value="">-- Chọn đáp án --</option><option value="A">A. read</option><option value="B">B. reading</option><option value="C">C. to reading</option><option value="D">D. reads</option></select>
+    <p><b>Câu 2.</b> If it rains tomorrow, we ______ at home.</p>
+    <select class="answer" id="grammar2"><option value="">-- Chọn đáp án --</option><option value="A">A. stay</option><option value="B">B. stayed</option><option value="C">C. will stay</option><option value="D">D. staying</option></select>
+    <p><b>Câu 3.</b> My brother runs ______ than me.</p>
+    <select class="answer" id="grammar3"><option value="">-- Chọn đáp án --</option><option value="A">A. fast</option><option value="B">B. faster</option><option value="C">C. fastest</option><option value="D">D. more fast</option></select>
+    <p><b>Câu 4.</b> She ______ to school every day.</p><select class="answer" id="grammar4"><option value="">-- Chọn đáp án --</option><option>A. go</option><option value="B">B. goes</option><option>C. going</option><option>D. gone</option></select>
+    <p><b>Câu 5.</b> We ______ dinner when he called.</p><select class="answer" id="grammar5"><option value="">-- Chọn đáp án --</option><option>A. have</option><option>B. had</option><option value="C">C. were having</option><option>D. are having</option></select>
+    <p><b>Câu 6.</b> You ______ wear a helmet when riding a bike.</p><select class="answer" id="grammar6"><option value="">-- Chọn đáp án --</option><option value="A">A. should</option><option>B. could</option><option>C. would</option><option>D. may</option></select>
+    <p><b>Câu 7.</b> This book is ______ than that one.</p><select class="answer" id="grammar7"><option value="">-- Chọn đáp án --</option><option>A. interesting</option><option value="B">B. more interesting</option><option>C. most interesting</option><option>D. interest</option></select>
+    <p><b>Câu 8.</b> I have lived here ______ 2020.</p><select class="answer" id="grammar8"><option value="">-- Chọn đáp án --</option><option>A. for</option><option value="B">B. since</option><option>C. at</option><option>D. in</option></select>
+    <p><b>Câu 9.</b> If I have time, I ______ you.</p><select class="answer" id="grammar9"><option value="">-- Chọn đáp án --</option><option>A. help</option><option value="B">B. will help</option><option>C. helped</option><option>D. helping</option></select>
+    <p><b>Câu 10.</b> They are interested in ______ English.</p><select class="answer" id="grammar10"><option value="">-- Chọn đáp án --</option><option>A. learn</option><option value="B">B. learning</option><option>C. learned</option><option>D. to learn</option></select>
+    <p><b>Câu 11.</b> There ______ a lot of trees near my house.</p><select class="answer" id="grammar11"><option value="">-- Chọn đáp án --</option><option>A. is</option><option value="B">B. are</option><option>C. be</option><option>D. being</option></select>
+    <p><b>Câu 12.</b> We have lived here ______ five years.</p><select class="answer" id="grammar12"><option value="">-- Chọn đáp án --</option><option value="A">A. for</option><option>B. since</option><option>C. from</option><option>D. at</option></select>
+    <p><b>Câu 13.</b> My sister is good ______ drawing.</p><select class="answer" id="grammar13"><option value="">-- Chọn đáp án --</option><option>A. in</option><option value="B">B. at</option><option>C. on</option><option>D. for</option></select>
+    <p><b>Câu 14.</b> He was tired, ______ he continued working.</p><select class="answer" id="grammar14"><option value="">-- Chọn đáp án --</option><option>A. because</option><option>B. so</option><option value="C">C. but</option><option>D. or</option></select>
+    <p><b>Câu 15.</b> If people recycle more, the environment ______ cleaner.</p><select class="answer" id="grammar15"><option value="">-- Chọn đáp án --</option><option>A. became</option><option value="B">B. will become</option><option>C. becoming</option><option>D. would became</option></select>
+    <p><b>Câu 16.</b> We should avoid ______ too much plastic.</p><select class="answer" id="grammar16"><option value="">-- Chọn đáp án --</option><option>A. use</option><option value="B">B. using</option><option>C. to using</option><option>D. used</option></select>
+    <p><b>Câu 17.</b> This is ______ village in the area.</p><select class="answer" id="grammar17"><option value="">-- Chọn đáp án --</option><option>A. beautiful</option><option>B. more beautiful</option><option value="C">C. the most beautiful</option><option>D. beautifully</option></select>
+    <p><b>Câu 18.</b> She speaks English ______ than her brother.</p><select class="answer" id="grammar18"><option value="">-- Chọn đáp án --</option><option>A. fluent</option><option value="B">B. more fluently</option><option>C. most fluent</option><option>D. fluency</option></select>
+    <p><b>Câu 19.</b> My parents ______ TV when I came home.</p><select class="answer" id="grammar19"><option value="">-- Chọn đáp án --</option><option>A. watch</option><option>B. watched</option><option value="C">C. were watching</option><option>D. are watching</option></select>
+    <p><b>Câu 20.</b> I ______ my homework already.</p><select class="answer" id="grammar20"><option value="">-- Chọn đáp án --</option><option>A. finish</option><option>B. finished</option><option value="C">C. have finished</option><option>D. am finishing</option></select>
+    <p><b>Câu 21.</b> Would you mind ______ the window?</p><select class="answer" id="grammar21"><option value="">-- Chọn đáp án --</option><option>A. open</option><option value="B">B. opening</option><option>C. to open</option><option>D. opened</option></select>
+    <p><b>Câu 22.</b> She asked me where I ______.</p><select class="answer" id="grammar22"><option value="">-- Chọn đáp án --</option><option>A. live</option><option value="B">B. lived</option><option>C. living</option><option>D. am live</option></select>
+    <p><b>Câu 23.</b> The book ______ by many students last year.</p><select class="answer" id="grammar23"><option value="">-- Chọn đáp án --</option><option>A. reads</option><option>B. read</option><option value="C">C. was read</option><option>D. is reading</option></select>
+    <p><b>Câu 24.</b> You don't have to ______ all the food.</p><select class="answer" id="grammar24"><option value="">-- Chọn đáp án --</option><option value="A">A. eat</option><option>B. eating</option><option>C. ate</option><option>D. to eating</option></select>
+    <p><b>Câu 25.</b> Let's ______ a clean-up activity this weekend.</p><select class="answer" id="grammar25"><option value="">-- Chọn đáp án --</option><option value="A">A. join</option><option>B. joining</option><option>C. to join</option><option>D. joined</option></select>
+    <p><b>Câu 26.</b> Neither Tom nor his friends ______ late.</p><select class="answer" id="grammar26"><option value="">-- Chọn đáp án --</option><option>A. is</option><option value="B">B. are</option><option>C. was</option><option>D. be</option></select>
+    <p><b>Câu 27.</b> I prefer reading books ______ playing games.</p><select class="answer" id="grammar27"><option value="">-- Chọn đáp án --</option><option>A. than</option><option value="B">B. to</option><option>C. with</option><option>D. for</option></select>
+    <p><b>Câu 28.</b> We should turn ______ the lights when leaving.</p><select class="answer" id="grammar28"><option value="">-- Chọn đáp án --</option><option>A. on</option><option value="B">B. off</option><option>C. up</option><option>D. into</option></select>
+    <p><b>Câu 29.</b> The storm was ______ than we expected.</p><select class="answer" id="grammar29"><option value="">-- Chọn đáp án --</option><option>A. strong</option><option value="B">B. stronger</option><option>C. strongest</option><option>D. strongly</option></select>
+    <p><b>Câu 30.</b> By the time we arrived, the train ______.</p><select class="answer" id="grammar30"><option value="">-- Chọn đáp án --</option><option>A. leaves</option><option>B. left</option><option value="C">C. had left</option><option>D. has left</option></select>
+    <p><b>Câu 31.</b> If I ______ you, I would talk to the teacher.</p><select class="answer" id="grammar31"><option value="">-- Chọn đáp án --</option><option>A. am</option><option value="B">B. were</option><option>C. was</option><option>D. be</option></select>
+    <p><b>Câu 32.</b> He suggested ______ a bicycle to school.</p><select class="answer" id="grammar32"><option value="">-- Chọn đáp án --</option><option>A. ride</option><option value="B">B. riding</option><option>C. to ride</option><option>D. rode</option></select>
+    <p><b>Câu 33.</b> There isn't ______ milk left.</p><select class="answer" id="grammar33"><option value="">-- Chọn đáp án --</option><option value="A">A. much</option><option>B. many</option><option>C. a few</option><option>D. several</option></select>
+    <p><b>Câu 34.</b> We need ______ information before making a decision.</p><select class="answer" id="grammar34"><option value="">-- Chọn đáp án --</option><option>A. many</option><option value="B">B. more</option><option>C. few</option><option>D. a</option></select>
+    <p><b>Câu 35.</b> Although it was raining, they ______ the football match.</p><select class="answer" id="grammar35"><option value="">-- Chọn đáp án --</option><option>A. cancel</option><option>B. cancelled</option><option value="C">C. continued</option><option>D. continues</option></select>
+    <p><b>Câu 36.</b> The students are looking forward to ______ the museum.</p><select class="answer" id="grammar36"><option value="">-- Chọn đáp án --</option><option>A. visit</option><option value="B">B. visiting</option><option>C. visited</option><option>D. to visit</option></select>
+    <p><b>Câu 37.</b> She has never ______ to a village before.</p><select class="answer" id="grammar37"><option value="">-- Chọn đáp án --</option><option>A. go</option><option>B. went</option><option value="C">C. been</option><option>D. going</option></select>
+    <p><b>Câu 38.</b> The air in the countryside is ______ than in the city.</p><select class="answer" id="grammar38"><option value="">-- Chọn đáp án --</option><option>A. polluted</option><option value="B">B. less polluted</option><option>C. most polluted</option><option>D. more pollute</option></select>
+    <p><b>Câu 39.</b> We will go hiking ______ the weather is good.</p><select class="answer" id="grammar39"><option value="">-- Chọn đáp án --</option><option value="A">A. if</option><option>B. unless</option><option>C. because of</option><option>D. despite</option></select>
+    <p><b>Câu 40.</b> They have to leave early ______ they don't miss the bus.</p><select class="answer" id="grammar40"><option value="">-- Chọn đáp án --</option><option>A. but</option><option>B. although</option><option value="C">C. so that</option><option>D. or</option></select>
+  </div>
+  <div class="section-title"><b>PHẦN V — WRITING</b></div><p><b>Đề bài:</b> Write <b>80–100 words</b> about <i>life in the countryside</i>. Describe what people do there, give two advantages and one disadvantage, and say whether you would like to live there in the future.</p>
+  <p class="small">📌 Điều kiện: bài phải từ 80 đến 100 từ. Điểm Writing sẽ dựa vào <b>ngữ pháp, từ vựng, nội dung, bố cục và độ dài</b>, không chỉ dựa vào số từ.</p>
+  <textarea class="answer" id="write" rows="5" placeholder="Viết bài 80–100 từ ở đây..."></textarea>
+  <button onclick="checkExam('${term}')">✅ NỘP BÀI</button>
+  <button type="button" onclick="showAnswerKey()" style="background:#102943;border:1px solid #315a7e">🔑 XEM ĐÁP ÁN SAU KHI NỘP</button>
+  <div id="result"></div></div>`;
+  examTimer=null;
+  applyExamVariant(term);
+  updateExamProgress();
+  document.querySelectorAll('#paper select,#paper input,#paper textarea').forEach(el=>el.addEventListener('input',updateExamProgress));
+}
+function updateExamProgress(){
+  const paper=document.getElementById('paper');if(!paper)return;
+  const fields=[...paper.querySelectorAll('select,input,textarea')];
+  const answered=fields.filter(x=>String(x.value||'').trim()).length;
+  const p=document.getElementById('examProgress');if(p)p.textContent=`📊 Tiến độ: ${answered}/${fields.length} ô đã trả lời`;
+}
+function applyExamVariant(term){
+  const match=term.match(/(Giữa kỳ 1|Cuối kỳ 1|Giữa kỳ 2|Cuối kỳ 2) — Đề ([1-5])/);
+  if(!match)return;
+  const bank={
+    'Giữa kỳ 1':[
+      {topic:'Leisure time and life in the countryside',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about how you spend your leisure time and what you like about the countryside.',speak:'Talk about your leisure activities and whether you prefer city or countryside life.',focus:'Units 1–3'},
+      {topic:'Teenagers and free-time activities',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about a useful activity teenagers can do after school.',speak:'Talk about a hobby you enjoy and explain why it is useful.',focus:'Units 1–3'},
+      {topic:'Community life in a village',listen:['A','B','village','F','meet new friends'],read:['T','F','A'],write:'Write about two advantages and one challenge of living in a village.',speak:'Describe a village and say what you would like to do there.',focus:'Units 1–2'},
+      {topic:'Healthy leisure activities',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about a healthy way teenagers can spend their free time.',speak:'Talk about your favourite free-time activity and its benefits.',focus:'Units 1–3'},
+      {topic:'Teenagers and school clubs',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about joining a school club and what you can learn from it.',speak:'Talk about a school club you would like to join and why.',focus:'Units 1–3'}
+    ],
+    'Cuối kỳ 1':[
+      {topic:'Ethnic groups of Viet Nam',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about a Vietnamese tradition that you find interesting.',speak:'Talk about a traditional custom in Viet Nam.',focus:'Units 4–6'},
+      {topic:'Customs and traditions',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about a family custom and explain why it is important.',speak:'Describe a custom your family follows.',focus:'Units 5–6'},
+      {topic:'Different lifestyles',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about the differences between two lifestyles.',speak:'Compare life in a city and a village.',focus:'Units 4–6'},
+      {topic:'Family traditions',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about how young people can preserve traditions.',speak:'Explain why traditions are important to young people.',focus:'Units 5–6'},
+      {topic:'Cultural diversity',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about why people should respect cultural differences.',speak:'Talk about cultural diversity in Viet Nam.',focus:'Units 4–6'}
+    ],
+    'Giữa kỳ 2':[
+      {topic:'Environmental protection',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about three things students can do to protect the environment.',speak:'Talk about an environmental problem and a solution.',focus:'Units 7–8'},
+      {topic:'Shopping and responsible consumption',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about how teenagers can become responsible shoppers.',speak:'Talk about what makes a good shopping choice.',focus:'Units 7–8'},
+      {topic:'Green schools',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about how your school could become greener.',speak:'Suggest two ways to make your school more environmentally friendly.',focus:'Units 7–8'},
+      {topic:'Reducing plastic waste',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about the problem of plastic waste and possible solutions.',speak:'Explain how students can reduce plastic use.',focus:'Units 7–8'},
+      {topic:'Eco-friendly shopping',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about the benefits of using reusable products.',speak:'Talk about an eco-friendly product you recommend.',focus:'Units 7–8'}
+    ],
+    'Cuối kỳ 2':[
+      {topic:'Natural disasters',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about a natural disaster and how people can prepare for it.',speak:'Talk about what people should do before a storm.',focus:'Units 9–12'},
+      {topic:'Communication in the future',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about how technology may change communication in the future.',speak:'Talk about a future communication technology.',focus:'Units 10–12'},
+      {topic:'Science and technology',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about one useful invention and its benefits.',speak:'Describe a technology that helps students learn.',focus:'Units 10–12'},
+      {topic:'Life on other planets',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about whether humans should explore other planets.',speak:'Talk about what life on another planet might be like.',focus:'Units 11–12'},
+      {topic:'Technology and future life',listen:['A','B','countryside','F','meet new friends'],read:['T','F','A'],write:'Write about one advantage and one disadvantage of future technology.',speak:'Talk about your ideal smart home in the future.',focus:'Units 10–12'}
+    ]
+  };
+  const data=bank[match[1]]?.[Number(match[2])-1];if(!data)return;
+  document.getElementById('speakingTopic').textContent=data.topic;
+  const heading=document.querySelector('#exam .section-title:nth-of-type(2)');
+  const smalls=document.querySelectorAll('#exam .small');
+  const topic=document.querySelector('#exam h3');if(topic)topic.textContent=`📌 ${term} — ĐỀ KIỂM TRA (${data.focus})`;
+  const speakPrompt=document.querySelector('#speakingTopic')?.parentElement?.nextElementSibling;
+  if(speakPrompt)speakPrompt.innerHTML=`Trình bày khoảng 1–2 phút về <b>${data.topic}</b>: nêu ít nhất 2 ý và giải thích lý do. Sau đó trả lời: <i>Would you like to experience this in the future? Why or why not?</i>`;
+  const writePrompt=document.querySelector('#write')?.previousElementSibling?.previousElementSibling;
+  if(writePrompt)writePrompt.innerHTML=`<b>Đề bài:</b> ${data.write} Write <b>80–100 words</b>.`;
+  window.currentVariant=data;
+  const readingBox=document.querySelector('#exam .section-title:nth-of-type(3)')?.nextElementSibling;
+  if(readingBox)readingBox.innerHTML=`<p><b>Read the passage and answer the questions.</b></p><div class="exam-card" style="display:block"><p>${data.topic} is an important topic for teenagers. Students can learn useful skills by taking part in activities at school and in their communities. They can also share ideas with friends, respect different lifestyles and make responsible choices. However, every activity has challenges, so students should plan carefully, listen to others and look for practical solutions. In this way, they can become more confident, responsible and active members of their community.</p></div>`;
+}
+let examTimer=null, examSeconds=2700, examLocked=false;
+let speakingRecorder=null,speakingStream=null,speakingChunks=[];
+async function startSpeakingRecord(){
+  try{
+    if(!navigator.mediaDevices?.getUserMedia)throw new Error('MIC');
+    speakingStream=await navigator.mediaDevices.getUserMedia({audio:true});
+    speakingChunks=[];
+    speakingRecorder=new MediaRecorder(speakingStream);
+    speakingRecorder.ondataavailable=e=>{if(e.data.size)speakingChunks.push(e.data)};
+    speakingRecorder.onstop=()=>{
+      const blob=new Blob(speakingChunks,{type:speakingRecorder.mimeType||'audio/webm'});
+      const audio=document.getElementById('speakingAudio');const playback=document.getElementById('speakingPlayback');
+      audio.src=URL.createObjectURL(blob);audio.load();audio.style.display='block';playback.style.display='block';
+      document.getElementById('speakingPlaybackHint').textContent='✅ Bản thu đã sẵn sàng. Bấm ▶ trên thanh phát hoặc nút PHÁT LẠI TỪ ĐẦU.';
+      speakingStream?.getTracks().forEach(t=>t.stop());
+    };
+    speakingRecorder.start();
+    document.getElementById('speakingStatus').textContent='🔴 Đang thu âm... Hãy nói rõ ràng trong khoảng 1–2 phút.';
+    if('SpeechRecognition' in window || 'webkitSpeechRecognition' in window){
+      const R=window.SpeechRecognition||window.webkitSpeechRecognition;window.speakingRecognition=new R();
+      window.speakingRecognition.lang='en-US';window.speakingRecognition.continuous=true;window.speakingRecognition.interimResults=false;
+      window.speakingRecognition.onresult=e=>{let text='';for(let i=e.resultIndex;i<e.results.length;i++)if(e.results[i].isFinal)text+=e.results[i][0].transcript+' ';const s=document.getElementById('speak');s.value=(s.value+' '+text).trim();};
+      window.speakingRecognition.start();
+    }
+  }catch(err){alert('Không thể dùng microphone. Hãy cho phép trình duyệt truy cập microphone và thử lại.');}
+}
+async function requestMicrophone(){
+  try{
+    if(!navigator.mediaDevices?.getUserMedia)throw new Error('MIC');
+    const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+    stream.getTracks().forEach(t=>t.stop());
+    document.getElementById('speakingStatus').textContent='✅ Đã được cấp quyền microphone. Bây giờ bạn có thể bấm “BẮT ĐẦU THU GIỌNG”.';
+  }catch(err){
+    document.getElementById('speakingStatus').textContent='❌ Chưa được cấp quyền microphone. Hãy chọn “Cho phép” trong thông báo của trình duyệt rồi thử lại.';
+    alert('Hãy chọn “Cho phép” để trang có thể dùng microphone.');
+  }
+}
+function stopSpeakingRecord(){
+  if(speakingRecorder&&speakingRecorder.state!=='inactive')speakingRecorder.stop();
+  if(window.speakingRecognition){try{window.speakingRecognition.stop()}catch(e){}}
+  const status=document.getElementById('speakingStatus');if(status)status.textContent='✅ Đã thu xong. Khung PHÁT LẠI BÀI NÓI nằm ngay bên dưới.';
+  const playback=document.getElementById('speakingPlayback');if(playback)playback.style.display='block';
+  const audio=document.getElementById('speakingAudio');if(audio&&speakingChunks.length){const blob=new Blob(speakingChunks,{type:speakingRecorder?.mimeType||'audio/webm'});audio.src=URL.createObjectURL(blob);audio.load();}
+}
+function replaySpeaking(){
+  const audio=document.getElementById('speakingAudio');
+  if(!audio||!audio.src)return;
+  audio.currentTime=0;
+  audio.play().catch(()=>{});
+}
+function startExamTimer(){
+  if(examTimer) clearInterval(examTimer);
+  examLocked=false;
+  examSeconds=Math.min(45,Number(document.getElementById('timeLimit').value)||45)*60;
+  const paper=document.getElementById('paper'); if(paper) paper.classList.remove('locked');
+  updateTimer();
+  examTimer=setInterval(()=>{examSeconds--;updateTimer();if(examSeconds<=0) lockExam();},1000);
+}
+function updateTimer(){
+  const t=document.getElementById('examTimer');if(!t)return;
+  const m=Math.floor(examSeconds/60),s=examSeconds%60;t.textContent=`⏱️ ${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  t.className='timer'+(examSeconds<=60?' danger':examSeconds<=300?' warning':'');
+}
+function lockExam(){
+  if(examLocked)return; examLocked=true;if(examTimer)clearInterval(examTimer);
+  const paper=document.getElementById('paper');if(paper)paper.classList.add('locked');
+  const t=document.getElementById('examTimer');if(t)t.textContent='⛔ HẾT GIỜ — BÀI ĐÃ KHÓA';
+  const btn=document.querySelector('#paper button[onclick^="checkExam"]');if(btn){btn.disabled=true;btn.textContent='🔒 BÀI ĐÃ KHÓA';}
+  alert('⏰ Hết giờ! Bài kiểm tra đã được khóa.');
+}
+function getListeningInfo(term){
+  const info={
+    'Giữa kỳ 1':'Nghe về thời gian rảnh, cuộc sống ở nông thôn và hoạt động của thanh thiếu niên — kết hợp chọn đáp án, điền từ và True/False.',
+    'Cuối kỳ 1':'Nghe về thanh thiếu niên và phong tục truyền thống — True/False.',
+    'Giữa kỳ 2':'Nghe về bảo vệ môi trường và mua sắm — điền thông tin còn thiếu.',
+    'Cuối kỳ 2':'Nghe về thiên tai, công nghệ và tương lai — chọn đáp án và từ khóa.',
+    'Listening':'Luyện nghe tổng hợp nhiều chủ đề — mỗi lần chọn một bài khác nhau.'
+  };
+  return info[term]||'Nghe 2 lần — luyện chọn đáp án, điền từ và True/False.';
+}
+function speakPractice(){
+  if(!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)){
+    alert('Trình duyệt này chưa hỗ trợ nhận giọng nói. Bạn có thể nhập phần Speaking để AI nhận xét.');return;
+  }
+  const R=window.SpeechRecognition||window.webkitSpeechRecognition,r=new R();
+  r.lang='en-US';r.start();r.onresult=e=>{document.getElementById('speak').value=e.results[0][0].transcript;};
+}
+function playListening(btn){
+  const term=document.querySelector('#exam h3')?.textContent||'';
+  const texts={
+    'Giữa kỳ 1':'Hi, I am Nam. In my free time, I enjoy reading books, especially adventure stories. I also play badminton twice a week with my classmates. My grandmother lives in a small village in the countryside. I often visit her at weekends. I like the countryside because the air is fresh and the people are friendly. I do not think life there is boring. There are many things to do, such as helping my grandmother in the garden and riding a bike around the village. At school, I also join the English and sports clubs. I join these clubs because I want to meet new friends and develop useful skills.',
+    'Cuối kỳ 1':'Mai is a teenager who enjoys spending time with her friends. At weekends, her family often follows a traditional custom of having dinner together. Everyone helps prepare the food and shares stories after dinner.',
+    'Giữa kỳ 2':'Our school is starting an environmental project. Students will collect paper and plastic bottles every Friday. They will also visit a local shop to learn how to choose useful products and avoid unnecessary packaging.',
+    'Cuối kỳ 2':'Last year, our town had a strong storm. People prepared emergency bags and listened to weather warnings. In the future, new technology may help us communicate faster and give earlier warnings about natural disasters.',
+    'Listening':'Hello! My name is Nam. I enjoy helping my community. Every weekend, I join a clean-up activity with my friends.'
+  };
+  const questions={
+    'Giữa kỳ 1':'After listening: 1) What does Nam enjoy doing in his free time? 2) How often does he play badminton? 3) Where does his grandmother live? 4) Is country life boring for Nam? 5) Why does he join school clubs?',
+    'Cuối kỳ 1':'After listening, answer True/False: 1) Mai is a teenager. 2) Her family has dinner together at weekends. 3) Nobody helps prepare the food.',
+    'Giữa kỳ 2':'After listening, fill in the blanks: 1) Students collect paper and ______ every Friday. 2) They visit a local ______. 3) They learn to avoid unnecessary ______.',
+    'Cuối kỳ 2':'After listening, choose: 1) What happened last year? 2) What did people listen to? 3) What may technology provide earlier?',
+    'Listening':'After listening, answer: 1) Who is speaking? 2) What activity does he join? 3) When does he join it?'
+  };
+  let key=Object.keys(texts).find(k=>term.includes(k))||'Listening';
+  const text=texts[key];
+  if(!('speechSynthesis' in window)){
+    alert('Trình duyệt này chưa hỗ trợ phát giọng nói.');return;
+  }
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=.9;
+  btn.textContent='🔊 Đang phát bài nghe...';
+  u.onend=()=>btn.textContent='▶ PHÁT LẠI BÀI NGHE';
+  speechSynthesis.speak(u);
+  const oldQ=document.getElementById('listenQuestions');
+  if(oldQ) oldQ.innerHTML='<b>📝 Câu hỏi:</b> '+(questions[key]||questions.Listening);
+}
+function checkExam(term){
+  if(examLocked){alert('⛔ Hết giờ — bài đã bị khóa.');return;}
+  const write=document.getElementById("write").value.trim();
+  const speak=document.getElementById("speak").value.trim();
+  const g1=document.getElementById("grammar1")?.value||'';
+  const g2=document.getElementById("grammar2")?.value||'';
+  const g3=document.getElementById("grammar3")?.value||'';
+  const g4=document.getElementById("grammar4")?.value||'';
+  const g5=document.getElementById("grammar5")?.value||'';
+  const g6=document.getElementById("grammar6")?.value||'';
+  const g7=document.getElementById("grammar7")?.value||'';
+  const g8=document.getElementById("grammar8")?.value||'';
+  const g9=document.getElementById("grammar9")?.value||'';
+  const g10=document.getElementById("grammar10")?.value||'';
+  const g11=document.getElementById("grammar11")?.value||'';
+  const g12=document.getElementById("grammar12")?.value||'';
+  const g13=document.getElementById("grammar13")?.value||'';
+  const g14=document.getElementById("grammar14")?.value||'';
+  const g15=document.getElementById("grammar15")?.value||'';
+  const g16=document.getElementById("grammar16")?.value||'';
+  const g17=document.getElementById("grammar17")?.value||'';
+  const g18=document.getElementById("grammar18")?.value||'';
+  const g19=document.getElementById("grammar19")?.value||'';
+  const g20=document.getElementById("grammar20")?.value||'';
+  const g21=document.getElementById("grammar21")?.value||'';
+  const g22=document.getElementById("grammar22")?.value||'';
+  const g23=document.getElementById("grammar23")?.value||'';
+  const g24=document.getElementById("grammar24")?.value||'';
+  const g25=document.getElementById("grammar25")?.value||'';
+  const g26=document.getElementById("grammar26")?.value||'';
+  const g27=document.getElementById("grammar27")?.value||'';
+  const g28=document.getElementById("grammar28")?.value||'';
+  const g29=document.getElementById("grammar29")?.value||'';
+  const g30=document.getElementById("grammar30")?.value||'';
+  const g31=document.getElementById("grammar31")?.value||'';
+  const g32=document.getElementById("grammar32")?.value||'';
+  const g33=document.getElementById("grammar33")?.value||'';
+  const g34=document.getElementById("grammar34")?.value||'';
+  const g35=document.getElementById("grammar35")?.value||'';
+  const g36=document.getElementById("grammar36")?.value||'';
+  const g37=document.getElementById("grammar37")?.value||'';
+  const g38=document.getElementById("grammar38")?.value||'';
+  const g39=document.getElementById("grammar39")?.value||'';
+  const g40=document.getElementById("grammar40")?.value||'';
+  const result=document.getElementById("result");
+  const grammar=[g1==='B',g2==='C',g3==='B',g4==='B',g5==='C',g6==='A',g7==='B',g8==='B',g9==='B',g10==='B',g11==='B',g12==='A',g13==='B',g14==='C',g15==='B',g16==='B',g17==='C',g18==='B',g19==='C',g20==='C',g21==='B',g22==='B',g23==='C',g24==='A',g25==='A',g26==='B',g27==='B',g28==='B',g29==='B',g30==='C',g31==='B',g32==='B',g33==='A',g34==='B',g35==='C',g36==='B',g37==='C',g38==='B',g39==='A',g40==='C'];
+  const variant=window.currentVariant||null;
+  const grammarScore=grammar.filter(Boolean).length;
+  const l1=document.getElementById('listen1')?.value||'';
+  const l2=document.getElementById('listen2')?.value||'';
+  const l3=document.getElementById('listen3')?.value.trim().toLowerCase()||'';
+  const l4=document.getElementById('listen4')?.value||'';
+  const l5=document.getElementById('listen5')?.value.trim().toLowerCase()||'';
+  const listeningAnswers=variant?.listen||['A','B','countryside','F','meet new friends'];
+  const listeningScore=[l1===listeningAnswers[0],l2===listeningAnswers[1],new RegExp(listeningAnswers[2],'i').test(l3),l4===listeningAnswers[3],new RegExp(listeningAnswers[4],'i').test(l5)].filter(Boolean).length;
+  const readingAnswers=variant?.read||['T','F','A'];
+  const readingScore=[document.getElementById('read1')?.value===readingAnswers[0],document.getElementById('read2')?.value===readingAnswers[1],document.getElementById('read3')?.value===readingAnswers[2],document.getElementById('read4')?.value.trim().length>2,document.getElementById('read5')?.value.trim().length>8].filter(Boolean).length;
+  const wordCount=write?write.split(/\s+/).filter(Boolean).length:0;
+  const writingOk=wordCount>=80&&wordCount<=100;
+  const speakWords=speak?speak.split(/\s+/).filter(Boolean):[];
+  const speakSentences=speak?speak.split(/[.!?]+/).map(x=>x.trim()).filter(Boolean):[];
+  const speakingCriteria={length:speakWords.length>=20,topic:/countryside|village|rural|farm|nature|city/i.test(speak),reasons:/because|so|prefer|like|dislike|future|would/i.test(speak),grammar:!(/\b(i goes|she go|he go|they is|we is|i has|he have)\b/i.test(speak))};
+  const speakingPoints=Object.values(speakingCriteria).filter(Boolean).length;
+  const commonErrors=[
+    [/\bi am go\b/i,'I am going'],[/\bi goes\b/i,'I go'],[/\bhe go\b/i,'he goes'],[/\bshe go\b/i,'she goes'],
+    [/\bi has\b/i,'I have'],[/\bhe have\b/i,'he has'],[/\bthey is\b/i,'they are'],[/\bwe is\b/i,'we are'],
+    [/\bi can to /i,'I can '],[/\benjoy to /i,'enjoy + V-ing'],[/\byesterday .*\bgo\b/i,'past tense: went'],
+    [/\bi very like\b/i,'I really like'],[/\bmore better\b/i,'better']
+  ];
+  const foundErrors=[];
+  commonErrors.forEach(([rx,fix])=>{if(rx.test(write))foundErrors.push(fix);});
+  const sentences=write?write.split(/[.!?]+/).map(x=>x.trim()).filter(Boolean):[];
+  const sentenceCount=sentences.length;
+  const uppercaseIssues=sentences.filter(s=>s&&!/^[A-Z]/.test(s)).length;
+  const punctuationIssues=write&&sentences.length?sentences.filter(s=>s&&!/[A-Za-z]$/.test(s)).length:0;
+  const contentChecks={
+    countryside:/countryside|village|rural|farm/i.test(write),
+    activities:/people|farmer|farm|grow|work|live|help|plant|raise/i.test(write),
+    advantages:/advantage|good|benefit|peaceful|fresh|quiet|friendly|nature|air/i.test(write),
+    disadvantage:/disadvantage|however|but|difficult|limited|problem|transport|entertainment/i.test(write),
+    future:/would like|wouldn't like|want to|prefer|future|live there/i.test(write)
+  };
+  const contentScore=Object.values(contentChecks).filter(Boolean).length;
+  const grammarErrorCount=foundErrors.length+uppercaseIssues+punctuationIssues;
+  const grammarScoreWriting=wordCount===0?0:Math.max(0,Math.round(4-Math.min(4,grammarErrorCount*0.75)));
+  const vocabularyScore=wordCount===0?0:Math.min(2,Math.round((new Set(write.toLowerCase().match(/[a-z]+/g)||[]).size/Math.max(1,wordCount))*4));
+  const organizationScore=wordCount===0?0:Math.min(2,Math.round((sentenceCount>=5?1:0)+(contentChecks.future&&contentChecks.disadvantage?1:0)));
+  const lengthScore=wordCount===0?0:(wordCount>=80&&wordCount<=100?2:wordCount>=70&&wordCount<=110?1:0);
+  const writingScore=wordCount===0?0:Math.min(15,Math.round((contentScore/5)*5+grammarScoreWriting+vocabularyScore+organizationScore+lengthScore));
+  const writingMax=15;
+  const writingNote=wordCount===0?'Chưa có bài viết — 0/15.':!writingOk?`Bài có ${wordCount} từ. Điều kiện là 80–100 từ nên không thể đạt tối đa điểm Writing.`:`Bài có ${wordCount} từ, đúng yêu cầu 80–100 từ.`;
+  const total=Math.round((listeningScore/5*20)+(readingScore/5*20)+(grammarScore/40*30)+writingScore+(speakingPoints/4*15));
+  localStorage.setItem('diyEnglishLastAnalysis',JSON.stringify({term,grammar:grammarScore,listening:listeningScore,reading:readingScore,speaking:speakingPoints,writing:writingScore,total,date:new Date().toLocaleString('vi-VN')}));
+  const history=JSON.parse(localStorage.getItem(historyKey())||'[]');history.push({term,score:total,grammar:grammarScore,listening:listeningScore,reading:readingScore,speaking:speakingPoints,writing:writingScore,date:new Date().toLocaleString('vi-VN')});localStorage.setItem(historyKey(),JSON.stringify(history.slice(-20)));loadHistory();updateLearningPanels();
+  result.innerHTML=`<div class="score">${total}/100</div>
+  <p><b>Listening:</b> ${listeningScore}/5 câu đạt.</p>
+  <p><b>Reading:</b> ${readingScore}/5 câu đạt.</p>
+  <p><b>Grammar:</b> ${grammarScore}/40 câu đúng. ${grammarScore<40?'Các câu sai cần xem lại quy tắc.':'Xuất sắc — đúng cả 40 câu.'}</p>
+  <p><b>Speaking:</b> ${speakingPoints}/4 tiêu chí đạt — ${speakingCriteria.length?'đủ độ dài':'quá ngắn'}; ${speakingCriteria.topic?'đúng chủ đề':'thiếu từ khóa chủ đề'}; ${speakingCriteria.reasons?'có ý kiến/lý do':'thiếu ý kiến hoặc lý do'}; ${speakingCriteria.grammar?'không phát hiện lỗi ngữ pháp cơ bản':'có lỗi ngữ pháp cơ bản'}.</p>
+  <p class="small">🎤 Phần thu âm được lưu để bạn nghe lại. Điểm Speaking hiện dựa trên nội dung nhận dạng thành văn bản; chưa thể chấm chính xác phát âm như giáo viên/người chấm AI chuyên dụng.</p>
+  <p><b>Writing:</b> ${writingScore}/${writingMax} điểm. ${writingNote}</p>
+  <p><b>📋 Writing rubric:</b> Nội dung ${Math.round((contentScore/5)*5)}/5 · Ngữ pháp ${grammarScoreWriting}/4 · Từ vựng ${vocabularyScore}/2 · Bố cục ${organizationScore}/2 · Độ dài ${lengthScore}/2.</p>
+  <p class="small">${foundErrors.length?`🔎 Lỗi/cấu trúc cần xem lại: ${foundErrors.join(' • ')}.`:'✅ Chưa phát hiện lỗi ngữ pháp phổ biến trong bộ kiểm tra hiện tại.'} ${uppercaseIssues?`Có ${uppercaseIssues} câu chưa viết hoa đầu câu.`:''} ${punctuationIssues?`Có ${punctuationIssues} câu cần kiểm tra dấu câu.`:''}</p>
+  ${foundErrors.length?`<p><b>💡 Gợi ý sửa:</b> ${foundErrors.join(' • ')}</p>`:''}
+  <p class="small">🤖 Bộ chấm thông minh: kiểm tra đáp án, độ dài, cấu trúc lỗi thường gặp, chữ hoa, dấu câu và nội dung Speaking. Đây chưa phải AI cloud nên không thể hiểu mọi lỗi ngữ pháp.</p>`;
+}
+function showAnswerKey(){
+  if(!document.getElementById('result')?.innerHTML.trim()){alert('Hãy nộp bài trước rồi xem đáp án.');return;}
+  const grammar=['B','C','B','B','C','A','B','B','B','B','B','A','B','C','B','B','C','B','C','C','B','B','C','A','A','B','B','B','B','C','B','B','A','B','C','B','C','B','A','C'];
+  const v=window.currentVariant||{listen:['A','B','countryside','F','meet new friends'],read:['T','F','A']};
+  document.getElementById('result').innerHTML+=`<div class="history-box"><h3>🔑 ĐÁP ÁN THAM KHẢO</h3><p><b>Listening:</b> ${v.listen.join(' · ')}</p><p><b>Reading:</b> C1 ${v.read[0]} · C2 ${v.read[1]} · C3 ${v.read[2]} · C4–C5: câu trả lời phải phù hợp nội dung bài đọc.</p><p><b>Grammar:</b> ${grammar.map((x,i)=>`${i+1}.${x}`).join(' · ')}</p><p class="small">Speaking và Writing là câu mở, cần chấm theo nội dung, ngữ pháp, từ vựng và bố cục.</p></div>`;
+}
+function aiGrade(){
+  const a=document.getElementById("ai");a.style.display="block";
+  const write=document.getElementById("write")?.value.trim()||'';
+  const speak=document.getElementById("speak")?.value.trim()||'';
+  if(!write&&!speak){a.innerHTML='<h3>🤖 AI CHỮA BÀI</h3><p>Hãy làm bài và nhập phần Speaking/Writing trước, sau đó bấm lại nút này.</p>';return;}
+  const words=t=>t.split(/\s+/).filter(Boolean);
+  const w=words(write),s=words(speak),lower=write.toLowerCase();
+  const unique=new Set((write.toLowerCase().match(/[a-z]+/g)||[])).size;
+  const sentences=write.split(/[.!?]+/).map(x=>x.trim()).filter(Boolean);
+  const linkers=(write.match(/\b(and|but|because|so|however|although|also|first|second|finally|therefore|for example|in addition|on the other hand)\b/gi)||[]).length;
+  const topic=/countryside|village|rural|farm|nature|city|teenager|leisure|environment|shopping|tradition|technology|disaster|planet/i.test(lower);
+  const errors=[
+    [/\bi am go\b/i,'I am going'],[/\bi goes\b/i,'I go'],[/\bhe go\b/i,'he goes'],[/\bshe go\b/i,'she goes'],
+    [/\bi has\b/i,'I have'],[/\bhe have\b/i,'he has'],[/\bthey is\b/i,'they are'],[/\bwe is\b/i,'we are'],
+    [/\bi can to\s+/i,'I can + verb'],[/\benjoy to\s+/i,'enjoy + V-ing'],[/\bmore better\b/i,'better'],[/\bmore easier\b/i,'easier'],[/\binformations\b/i,'information']
+  ];
+  const found=errors.filter(([rx])=>rx.test(write)).map(([,fix])=>fix);
+  const speakingErrors=errors.filter(([rx])=>rx.test(speak)).map(([,fix])=>fix);
+  const wGrammar=Math.max(0,100-Math.min(70,found.length*12+(sentences.filter(x=>x&&!/^[A-Z]/.test(x)).length*5)));
+  const wVocab=w.length?Math.min(100,Math.round((unique/w.length)*140)):0;
+  const wCohesion=Math.min(100,(sentences.length>=5?45:sentences.length*9)+Math.min(35,linkers*7)+(topic?20:0));
+  const wTask=Math.min(100,(w.length>=80?30:w.length>=60?20:w.length*0.25)+(topic?25:0)+(sentences.length>=4?20:0)+(linkers>=2?15:0)+(lower.includes('because')||lower.includes('however')?10:0));
+  const wScore=Math.round(wGrammar*.30+wVocab*.20+wCohesion*.20+wTask*.30);
+  const sGrammar=Math.max(0,100-Math.min(70,speakingErrors.length*15));
+  const sVocab=s.length?Math.min(100,Math.round((new Set(s.map(x=>x.toLowerCase().replace(/[^a-z']/g,''))).size/s.length)*150)):0;
+  const sFluency=Math.min(100,(s.length>=90?60:s.length>=50?45:s.length>=25?30:s.length*1.2)+(s.length?20:0));
+  const sCohesion=Math.min(100,(s.length>=40?40:s.length*0.8)+(s.match(/\b(and|but|because|however|also|so|then|first|finally)\b/gi)||[]).length*8);
+  const sTask=Math.min(100,(s.length>=40?45:s.length>=20?30:s.length*1.2)+(topic?30:0)+(s.match(/\b(because|why|prefer|would|future|like|dislike)\b/gi)?25:0));
+  const sScore=Math.round(sGrammar*.25+sVocab*.20+sFluency*.20+sCohesion*.15+sTask*.20);
+  const cefr=x=>x>=90?'C1':x>=80?'B2':x>=65?'B1':x>=45?'A2':x>=25?'A1':'Pre-A1';
+  const overall=Math.round((wScore+sScore)/2);
+  const advice=[];
+  if(w.length<80)advice.push('Writing còn ngắn: hướng tới 80–100 từ.');
+  if(found.length)advice.push('Ôn lại các cấu trúc trong danh sách lỗi bên dưới.');
+  if(wVocab<60)advice.push('Tăng từ vựng và tránh lặp lại cùng một từ.');
+  if(wCohesion<60)advice.push('Dùng thêm từ nối như however, because, therefore, in addition.');
+  if(s.length<25)advice.push('Speaking quá ngắn; hãy nói thành câu đầy đủ và thêm lý do/ví dụ.');
+  if(sTask<60)advice.push('Speaking cần bám sát chủ đề và trả lời đủ yêu cầu.');
+  if(!advice.length)advice.push('Giữ cách triển khai hiện tại và tiếp tục luyện đề khó hơn.');
+  const bar=(name,val)=>`<div class="ai-box"><b>${name} ${val}/100</b><div class="ai-bar"><i style="width:${Math.max(0,Math.min(100,val))}%"></i></div></div>`;
+  const errorList=[...new Set([...found.map(x=>`Writing: ${x}`),...speakingErrors.map(x=>`Speaking: ${x}`)])];
+  a.innerHTML=`<h3>🤖 AI CHỮA BÀI NÂNG CAO</h3>
+  <div class="ai-panel"><div class="ai-grid">${bar('Grammar',Math.round((wGrammar+sGrammar)/2))}${bar('Vocabulary',Math.round((wVocab+sVocab)/2))}${bar('Cohesion',Math.round((wCohesion+sCohesion)/2))}${bar('Task',Math.round((wTask+sTask)/2))}</div>
+  <div class="score">${overall}/100 · ${cefr(overall)}</div>
+  <p><b>✍️ Writing:</b> ${wScore}/100 — ${cefr(wScore)} · ${w.length} từ · ${sentences.length} câu · ${unique} từ khác nhau · ${linkers} từ/cụm từ nối.</p>
+  <p><b>🎤 Speaking:</b> ${sScore}/100 — ${cefr(sScore)} · ${s.length} từ.</p>
+  <p><b>📌 Nhận xét cá nhân:</b> ${advice.join(' ')}</p>
+  ${errorList.length?`<div class="history-box"><h3>🔎 ERROR LEDGER</h3>${errorList.map(x=>`<div class="error-item">⚠️ ${x}</div>`).join('')}</div>`:'<p>✅ Chưa phát hiện lỗi phổ biến trong bộ quy tắc hiện tại.</p>'}
+  <p class="small">🎧 Listening/Reading vẫn được chấm bằng đáp án của đề. Với Speaking, bản trình duyệt hiện dùng transcript nên <b>không thể đánh giá chính xác phát âm</b>. Các hệ thống đánh giá ngôn ngữ hiện đại thường tách grammar, vocabulary, fluency/coherence, task fulfilment và pronunciation; điểm AI nên được xem là phản hồi hỗ trợ, không phải chứng nhận chính thức. </p></div>`;
+}
+function getDeviceId(){
+  let id=localStorage.getItem('diyEnglishDeviceId');
+  if(!id){id=(crypto.randomUUID?crypto.randomUUID():('dev_'+Date.now()+'_'+Math.random().toString(36).slice(2)));localStorage.setItem('diyEnglishDeviceId',id)}
+  return id;
+}
+
+function isPremiumUser(user){
+  const info=diyPremiumInfo(user);
+  return !!(info&&Number(info.expiresAt)>Date.now());
+}
+
+function checkPremiumDevice(user){
+  if(!isPremiumUser(user))return true;
+  const key='diyEnglishPremiumDevice_'+user;
+  const saved=localStorage.getItem(key);
+  const current=getDeviceId();
+  if(!saved){localStorage.setItem(key,current);return true}
+  if(saved!==current){alert('Tài khoản Premium này đã được liên kết với thiết bị khác.\nVui lòng dùng đúng thiết bị đã đăng ký hoặc liên hệ Admin để đổi thiết bị.');return false}
+  return true;
+}
+</script>
+</body>
+</html>
